@@ -36,7 +36,7 @@
                     <a href="about.html" class="nav__item">About Us</a>
                     <a href="rooms.html" class="nav__item">Rooms</a>
                     <a href="offers.html" class="nav__item">Offers</a>
-                    <a href="contact.html" class="nav__item">Contact</a>
+                    <a href="{{ route('contact') }}" class="nav__item">Contact</a>
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
@@ -225,9 +225,9 @@
                                 class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{asset('assets/imgs/room-info.svg')}}"
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                             alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{asset('assets/imgs/room-img6.jpg')}}"
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img6.jpg') }}"
                             alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
