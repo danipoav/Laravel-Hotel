@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Miranda DP</title>
     <link rel="icon" type="image/svg+xml" href="src/assets/icons/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -20,7 +20,7 @@
             <div class="nav__container">
                 <div class="nav__container nav__container__menu">
                     <div class="nav__container__menu nav__container__menu--burger">
-                        <img id="mobileMenuBurguer" src="src/assets/icons/menu.svg" alt="Menu icon">
+                        <img id="mobileMenuBurguer" src="{{ asset('assets/icons/menu.svg') }}" alt="Menu icon">
                     </div>
                     <div class="nav__container__menu nav__container__menu--logo">
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
@@ -28,7 +28,7 @@
                         </div>
                         <a href="index.html">
                             <img class="nav__container__menu--logo nav__container__menu--logo--title"
-                                src="src/assets/icons/logo.svg" alt="Hotel Title">
+                                src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="src/assets/icons/person.svg"
-                            alt="User icon">
-                        <img class="nav__container__functionalities--search" src="src/assets/icons/search.svg"
-                            alt="Search icon">
+                        <img class="nav__container__functionalities--person"
+                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
+                        <img class="nav__container__functionalities--search"
+                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -114,13 +114,14 @@
             </div>
             <div class="aboutSection__cards">
                 <div class="aboutSection__cards__team">
-                    <img class="aboutSection__cards__team--img" src="src/assets/imgs/team.jpg" alt="team" />
+                    <img class="aboutSection__cards__team--img" src="{{ asset('assets/imgs/team.jpg') }}"
+                        alt="team" />
                     <div class="aboutSection__cards__team--container">
                         <div class="aboutSection__cards__team--container--icons">
                             <img class="aboutSection__cards__team--container--icons--small"
-                                src="src/assets/icons/strong-team.svg" alt="" />
+                                src="{{ asset('assets/icons/strong-team.svg') }}" alt="" />
                             <img class="aboutSection__cards__team--container--icons--big"
-                                src="src/assets/icons/strong-team-transparent.svg" alt="Strong team" />
+                                src="{{ asset('assets/icons/strong-team-transparent.svg') }}" alt="Strong team" />
                         </div>
                         <h2 class="aboutSection__cards__team--container--title">
                             Strong Team
@@ -132,11 +133,12 @@
                     </div>
                 </div>
                 <div class="aboutSection__cards__room">
-                    <img class="aboutSection__cards__room--img" src="src/assets/imgs/luxury.jpg" alt="Luxury room" />
+                    <img class="aboutSection__cards__room--img" src="{{ asset('assets/imgs/luxury.jpg') }}"
+                        alt="Luxury room" />
                     <div class="aboutSection__cards__room--container">
                         <div class="aboutSection__cards__room--container--icons">
                             <img class="aboutSection__cards__room--container--icons--small"
-                                src="src/assets/icons/calendar.svg" alt="Luxury room" />
+                                src="{{ asset('assets/icons/calendar.svg') }}" alt="Luxury room" />
                         </div>
                         <h2 class="aboutSection__cards__room--container--title">
                             Luxury Room
@@ -158,64 +160,82 @@
             <div class="swiper roomSlider__slides">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img1.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img2.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img3.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img4.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img4.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img5.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg" alt="Room extras"/>
-                        <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img6.jpg" alt="Hotel room"/>
+                        <img class="roomSlider__slides--extras" src="{{asset('assets/imgs/room-info.svg')}}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{asset('assets/imgs/room-img6.jpg')}}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore.
                         </p>
-                        <p class="roomSlider__slides--price">$345<span class="roomSlider__slides--price--perNight">/Night</span></p>
+                        <p class="roomSlider__slides--price">$345<span
+                                class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
                 </div>
                 <div class="swiper-button-prev"></div>
@@ -238,7 +258,7 @@
                 <video autoplay muted loop controls>
                     <source src="src/assets/video/video-hotel.mp4" type="video/mp4">
                 </video>
-            </div>            
+            </div>
 
             <button class="videoSection__button btn">BOOK NOW</button>
         </section>
@@ -364,8 +384,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -381,8 +401,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -398,8 +418,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -417,8 +437,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -434,8 +454,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -451,8 +471,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -470,8 +490,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -487,8 +507,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -504,8 +524,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -523,8 +543,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -540,8 +560,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -557,8 +577,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow"
-                                    src="src/assets/imgs/goldenArrow.png" alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow" src="src/assets/imgs/goldenArrow.png"
+                                    alt="Golden arrow" />
                             </div>
                         </div>
                     </div>
@@ -580,22 +600,10 @@
                     <div class="swiperMenuImages-pagination"></div>
                 </div>
                 <div class="menuSection__imagesDesktop">
-                    <img
-                      class="swiperMenuImages__img"
-                      src="src/assets/imgs/food2.jpg"
-                      alt="Food image"
-                    />
-                    <img
-                      class="swiperMenuImages__img"
-                      src="src/assets/imgs/food.jpg"
-                      alt="Food image"
-                    />
-                    <img
-                      class="swiperMenuImages__img"
-                      src="src/assets/imgs/food3.jpg"
-                      alt="Food image"
-                    />
-                  </div>
+                    <img class="swiperMenuImages__img" src="src/assets/imgs/food2.jpg" alt="Food image" />
+                    <img class="swiperMenuImages__img" src="src/assets/imgs/food.jpg" alt="Food image" />
+                    <img class="swiperMenuImages__img" src="src/assets/imgs/food3.jpg" alt="Food image" />
+                </div>
             </div>
         </section>
 
@@ -659,22 +667,23 @@
                 </p>
                 <div class="footer__container1__subcontainer1__icons">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <img src="src/assets/icons/facebook.svg" alt="Logo"  />
+                        <img src="src/assets/icons/facebook.svg" alt="Logo" />
                     </a>
-                    <svg width="24" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="38" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M21 24H3C1.344 24 0 22.656 0 21V3C0 1.344 1.344 0 3 0H21C22.656 0 24 1.344 24 3V21C24 22.656 22.656 24 21 24ZM9.216 18.096C14.874 18.096 17.97 13.404 17.97 9.342C17.97 9.21 17.97 9.078 17.964 8.946C18.564 8.514 19.086 7.968 19.5 7.35C18.948 7.596 18.354 7.758 17.73 7.836C18.366 7.458 18.852 6.852 19.086 6.132C18.492 6.486 17.832 6.738 17.13 6.876C16.566 6.276 15.768 5.904 14.886 5.904C13.188 5.904 11.808 7.284 11.808 8.982C11.808 9.222 11.838 9.456 11.886 9.684C9.33 9.558 7.062 8.328 5.544 6.468C5.28 6.924 5.13 7.452 5.13 8.016C5.13 9.084 5.676 10.026 6.498 10.578C5.994 10.56 5.52 10.422 5.106 10.194V10.236C5.106 11.724 6.168 12.972 7.572 13.254C7.314 13.326 7.044 13.362 6.762 13.362C6.564 13.362 6.372 13.344 6.186 13.308C6.576 14.532 7.716 15.42 9.06 15.444C8.004 16.272 6.678 16.764 5.238 16.764C4.992 16.764 4.746 16.752 4.506 16.722C5.862 17.586 7.482 18.096 9.216 18.096Z"
                             fill="#777777" />
                     </svg>
                     <a href="https://www.behance.net/" target="_blank">
-                        <img src="src/assets/icons/behance.svg" alt="Logo"  />
+                        <img src="src/assets/icons/behance.svg" alt="Logo" />
                     </a>
                     <a href="https://www.linkedin.com/" target="_blank">
-                        <img src="src/assets/icons/linkedin.svg" alt="Logo"  />
+                        <img src="src/assets/icons/linkedin.svg" alt="Logo" />
                     </a>
-                    
+
                     <a href="https://www.youtube.com/" target="_blank">
-                        <img src="src/assets/icons/youtube.svg" alt="Logo"  />
+                        <img src="src/assets/icons/youtube.svg" alt="Logo" />
                     </a>
                 </div>
             </div>
@@ -779,8 +788,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"> </script>
-    
+    <script src="src/js/scripts.js"></script>
+
 </body>
 
 </html>
