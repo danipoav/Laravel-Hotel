@@ -33,9 +33,9 @@
                     </div>
                 </div>
                 <div class="nav__menu">
-                    <a href="about.html" class="nav__item">About Us</a>
-                    <a href="rooms.html" class="nav__item">Rooms</a>
-                    <a href="offers.html" class="nav__item">Offers</a>
+                    <a href="about.html" class="nav__itzem">About Us</a>
+                    <a href="{{ route('rooms') }}" class="nav__item">Rooms</a>
+                    <a href="{{ route('offers') }}" class="nav__item">Offers</a>
                     <a href="{{ route('contact') }}" class="nav__item">Contact</a>
                 </div>
                 <div>
