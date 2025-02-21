@@ -26,8 +26,8 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
-                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
+                        <a href="{{ route('index') }}"> <img
+                                class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
@@ -273,10 +273,10 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/rating.svg') }}"
-                                alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/01.jpg') }}"
-                                alt="Number one" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/rating.svg') }}" alt="Rating icon" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/01.jpg') }}" alt="Number one" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Have High Rating</h1>
@@ -287,10 +287,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/hours.svg') }}"
-                                alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/02.jpg') }}"
-                                alt="Number two" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/hours.svg') }}" alt="Rating icon" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/02.jpg') }}" alt="Number two" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Quiet Hours</h1>
@@ -301,10 +301,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/locations.svg') }}"
-                                alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/03.jpg') }}"
-                                alt="Number three" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/locations.svg') }}" alt="Rating icon" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/03.jpg') }}" alt="Number three" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Best Locations</h1>
@@ -317,8 +317,8 @@
                         <div class="featuresSection__slides__container">
                             <img class="featuresSection__slides__container--icon"
                                 src="{{ asset('assets/icons/cancellation.svg') }}" alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/04.jpg') }}"
-                                alt="Number four" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/04.jpg') }}" alt="Number four" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Free Cancellation</h1>
@@ -329,10 +329,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/payment.svg') }}"
-                                alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/05.jpg') }}"
-                                alt="Number five" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/payment.svg') }}" alt="Rating icon" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/05.jpg') }}" alt="Number five" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Payment Options</h1>
@@ -343,10 +343,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/offers.svg') }}"
-                                alt="Rating icon" />
-                            <img class="featuresSection__slides__container--number" src="{{ asset('assets/imgs/06.jpg') }}"
-                                alt="Number six" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/offers.svg') }}" alt="Rating icon" />
+                            <img class="featuresSection__slides__container--number"
+                                src="{{ asset('assets/imgs/06.jpg') }}" alt="Number six" />
                         </div>
 
                         <h1 class="featuresSection__slides--title">Special Offers</h1>
@@ -384,8 +384,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -401,8 +401,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -418,8 +418,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -437,8 +437,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -454,8 +454,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -471,8 +471,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -490,8 +490,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -507,8 +507,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -524,8 +524,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -543,8 +543,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part1--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part1--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
@@ -560,8 +560,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part2--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part2--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
@@ -577,8 +577,8 @@
                                         sed do eiusmod tempor.
                                     </p>
                                 </div>
-                                <img class="menuSection__slides__part3--arrow" src="{{ asset('assets/imgs/goldenArrow.png') }}"
-                                    alt="Golden arrow" />
+                                <img class="menuSection__slides__part3--arrow"
+                                    src="{{ asset('assets/imgs/goldenArrow.png') }}" alt="Golden arrow" />
                             </div>
                         </div>
                     </div>
@@ -588,21 +588,26 @@
                 <div class="swiperMenuImages menuSection__images">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}" alt="Food image" />
+                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}"
+                                alt="Food image" />
                         </div>
                         <div class="swiper-slide">
-                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food.jpg') }}" alt="Food image" />
+                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food.jpg') }}"
+                                alt="Food image" />
                         </div>
                         <div class="swiper-slide">
-                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}" alt="Food image" />
+                            <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}"
+                                alt="Food image" />
                         </div>
                     </div>
                     <div class="swiperMenuImages-pagination"></div>
                 </div>
                 <div class="menuSection__imagesDesktop">
-                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}" alt="Food image" />
+                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}"
+                        alt="Food image" />
                     <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food.jpg') }}" alt="Food image" />
-                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}" alt="Food image" />
+                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}"
+                        alt="Food image" />
                 </div>
             </div>
         </section>
@@ -788,7 +793,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

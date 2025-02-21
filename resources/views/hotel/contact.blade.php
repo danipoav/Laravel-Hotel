@@ -26,8 +26,7 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
-                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
+                        <a href="{{ route('index') }}">                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
@@ -110,11 +109,12 @@
 
 
 
-        <section class="contactFormSection">
+        <form class="contactFormSection" action="{{route('create.contact')}}" method="POST">
+            @csrf
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Your full name" />
+                        placeholder="Your name" />
                     <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-person.svg') }}"
                         alt="Contact icon" />
                 </div>
@@ -128,13 +128,13 @@
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Enter email address" />
+                        placeholder="Add day" />
                     <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-mail.svg') }}"
                         alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Enter subject" />
+                        placeholder="Status" />
                     <img class="contactFormSection__firstContainer__input__icon"
                         src="{{ asset('assets/icons/form-subject.svg') }}" alt="Contact icon" />
                 </div>
@@ -142,13 +142,13 @@
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field--big" type="text"
-                        placeholder="Tell us what you need" />
+                        placeholder="Your job description" />
                     <img class="contactFormSection__firstContainer__input__icon"
                         src="{{ asset('assets/icons/form-pencil.svg') }}" alt="Contact icon" />
                 </div>
             </div>
-            <button class="btn">SEND</button>
-        </section>
+            <button type="submit" class="btn">SEND</button>
+        </form>
     </main>
 
 
@@ -287,7 +287,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

@@ -26,8 +26,7 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
-                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
+                        <a href="{{ route('index') }}">                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
@@ -649,7 +648,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

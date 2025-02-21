@@ -27,7 +27,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('hotel.index');
     }
 
     /**

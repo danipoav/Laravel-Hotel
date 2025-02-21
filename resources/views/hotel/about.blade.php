@@ -26,7 +26,7 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
+                        <a href="{{ route('index') }}">
                             <img class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
@@ -40,10 +40,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
-                            alt="User icon">
-                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
-                            alt="Search icon">
+                        <img class="nav__container__functionalities--person"
+                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
+                        <img class="nav__container__functionalities--search"
+                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -78,36 +78,36 @@
             </h1>
             <div class="aboutVideoSection__container">
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/breakfast.svg') }}"
-                        alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon"
+                        src="{{ asset('assets/icons/breakfast.svg') }}" alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         BREAKFAST
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/airport.svg') }}"
-                        alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon"
+                        src="{{ asset('assets/icons/airport.svg') }}" alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         AIRPORT PICKUP
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/guide.svg') }}"
-                        alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon"
+                        src="{{ asset('assets/icons/guide.svg') }}" alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         CITY GUIDE
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service--hide">
-                    <img class="aboutVideoSection__container__service--hide__icon" src="{{ asset('assets/icons/bbq.svg') }}"
-                        alt="Service icon" />
+                    <img class="aboutVideoSection__container__service--hide__icon"
+                        src="{{ asset('assets/icons/bbq.svg') }}" alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service--hide__title">
                         BBQ PARTY
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/luxury.svg') }}"
-                        alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon"
+                        src="{{ asset('assets/icons/luxury.svg') }}" alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         LUXURY ROOM
                     </h1>
@@ -145,8 +145,8 @@
                 <div class="swiper-wrapper dark__swiper-wrapper">
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/rating.svg') }}"
-                                alt="Rating icon" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/rating.svg') }}" alt="Rating icon" />
                             <div class="featuresSection__slides__container--number dark__slides--number">
                                 01
                             </div>
@@ -162,8 +162,8 @@
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/hours.svg') }}"
-                                alt="Hours icon" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/hours.svg') }}" alt="Hours icon" />
                             <div class="featuresSection__slides__container--number dark__slides--number">
                                 02
                             </div>
@@ -179,8 +179,8 @@
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/locations.svg') }}"
-                                alt="Location icon" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/locations.svg') }}" alt="Location icon" />
                             <div class="featuresSection__slides__container--number dark__slides--number">
                                 03
                             </div>
@@ -213,8 +213,8 @@
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/payment.svg') }}"
-                                alt="Payment icon" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/payment.svg') }}" alt="Payment icon" />
                             <div class="featuresSection__slides__container--number dark__slides--number">
                                 05
                             </div>
@@ -230,8 +230,8 @@
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
-                            <img class="featuresSection__slides__container--icon" src="{{ asset('assets/icons/offers.svg') }}"
-                                alt="Offers icon" />
+                            <img class="featuresSection__slides__container--icon"
+                                src="{{ asset('assets/icons/offers.svg') }}" alt="Offers icon" />
                             <div class="featuresSection__slides__container--number dark__slides--number">
                                 06
                             </div>
@@ -360,7 +360,8 @@
             <p class="counterSection__subtitle">COUNTER</p>
             <h1 class="counterSection__title">Some Fun Facts</h1>
             <div class="counterSection__container">
-                <img class="counterSection__container__icon" src="{{ asset('assets/icons/happy.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__icon" src="{{ asset('assets/icons/happy.svg') }}"
+                    alt="Facts icon" />
                 <div class="counterSection__container__subContainer">
                     <h1 class="counterSection__container__subContainer__number">
                         8000
@@ -369,27 +370,32 @@
                         Happy Users
                     </p>
                 </div>
-                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}"
+                    alt="Facts icon" />
             </div>
             <div class="counterSection__container">
-                <img class="counterSection__container__icon" src="{{ asset('assets/icons/review.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__icon" src="{{ asset('assets/icons/review.svg') }}"
+                    alt="Facts icon" />
                 <div class="counterSection__container__subContainer">
                     <h1 class="counterSection__container__subContainer__number">10M</h1>
                     <p class="counterSection__container__subContainer__text">
                         Reviews & Appriciate
                     </p>
                 </div>
-                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}"
+                    alt="Facts icon" />
             </div>
             <div class="counterSection__container">
-                <img class="counterSection__container__icon" src="{{ asset('assets/icons/country.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__icon" src="{{ asset('assets/icons/country.svg') }}"
+                    alt="Facts icon" />
                 <div class="counterSection__container__subContainer">
                     <h1 class="counterSection__container__subContainer__number">100</h1>
                     <p class="counterSection__container__subContainer__text">
                         Country Coverage
                     </p>
                 </div>
-                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}" alt="Facts icon" />
+                <img class="counterSection__container__arrow" src="{{ asset('assets/icons/arrow.svg') }}"
+                    alt="Facts icon" />
             </div>
             <div class="swiperMenuImages counterSection__images">
                 <div class="swiper-wrapper">
@@ -551,7 +557,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

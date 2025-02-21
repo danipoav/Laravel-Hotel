@@ -26,8 +26,8 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
-                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
+                        <a href="{{ route('index') }}"> <img
+                                class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
@@ -40,10 +40,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
-                            alt="User icon">
-                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
-                            alt="Search icon">
+                        <img class="nav__container__functionalities--person"
+                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
+                        <img class="nav__container__functionalities--search"
+                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -71,8 +71,10 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div style="position: relative">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}" alt="Hotel room" />
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -86,8 +88,10 @@
                         </div>
                     </div>
                     <div style="position: relative">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}" alt="Hotel room" />
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Single Room</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -101,8 +105,10 @@
                         </div>
                     </div>
                     <div style="position: relative">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}" alt="Hotel room" />
+                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                            alt="Room extras" />
+                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
+                            alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Suite</h1>
                         <p class="roomSlider__slides--description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -647,7 +653,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="src/js/scripts.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 
