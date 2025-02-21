@@ -114,13 +114,13 @@
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Your name" />
+                        placeholder="Your name" name="name"/>
                     <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-person.svg') }}"
                         alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Add phone number" />
+                        placeholder="Add phone number" name="phone"/>
                     <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-phone.svg') }}"
                         alt="Contact icon" />
                 </div>
@@ -128,13 +128,13 @@
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Add day" />
+                        placeholder="Add day" name="days"/>
                     <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-mail.svg') }}"
                         alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Status" />
+                        placeholder="Status" name="status"/>
                     <img class="contactFormSection__firstContainer__input__icon"
                         src="{{ asset('assets/icons/form-subject.svg') }}" alt="Contact icon" />
                 </div>
@@ -142,7 +142,7 @@
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field--big" type="text"
-                        placeholder="Your job description" />
+                        placeholder="Your job description" name="job_desc"/>
                     <img class="contactFormSection__firstContainer__input__icon"
                         src="{{ asset('assets/icons/form-pencil.svg') }}" alt="Contact icon" />
                 </div>
