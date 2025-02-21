@@ -20,7 +20,7 @@
             <div class="nav__container">
                 <div class="nav__container nav__container__menu">
                     <div class="nav__container__menu nav__container__menu--burger">
-                        <img id="mobileMenuBurguer" src="src/assets/icons/menu.svg" alt="Menu icon">
+                        <img id="mobileMenuBurguer" src="{{ asset('assets/icons/menu.svg') }}" alt="Menu icon">
                     </div>
                     <div class="nav__container__menu nav__container__menu--logo">
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
@@ -28,7 +28,7 @@
                         </div>
                         <a href="index.html">
                             <img class="nav__container__menu--logo nav__container__menu--logo--title"
-                                src="src/assets/icons/logo.svg" alt="Hotel Title">
+                                src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="src/assets/icons/person.svg"
+                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
                             alt="User icon">
-                        <img class="nav__container__functionalities--search" src="src/assets/icons/search.svg"
+                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
                             alt="Search icon">
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="src/assets/imgs/room-img1.jpg" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img1.jpg') }}" alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -101,52 +101,52 @@
                         <div class="offerRoomSection__room__bigContainer__smallContainer__amenitiesContainer">
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/air-conditioner.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/air-conditioner.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Air conditioner</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/wifi.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/wifi.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">High speed WiFi</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/lunch.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/lunch.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Breakfast</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/kitchen.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/kitchen.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Kitchen</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/cleaning.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/cleaning.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Cleaning</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shower.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shower.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shower</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/grocery.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/grocery.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Grocery</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/bed.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/bed.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Single bed</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shop.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shop.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shop near</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/towel.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/towel.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Towels</p>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="src/assets/imgs/room-img4.jpg" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img4.jpg') }}" alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -188,52 +188,52 @@
                         <div class="offerRoomSection__room__bigContainer__smallContainer__amenitiesContainer">
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/air-conditioner.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/air-conditioner.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Air conditioner</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/wifi.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/wifi.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">High speed WiFi</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/lunch.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/lunch.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Breakfast</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/kitchen.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/kitchen.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Kitchen</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/cleaning.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/cleaning.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Cleaning</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shower.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shower.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shower</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/grocery.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/grocery.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Grocery</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/bed.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/bed.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Single bed</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shop.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shop.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shop near</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/towel.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/towel.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Towels</p>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="src/assets/imgs/room-img6.jpg" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img6.jpg') }}" alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -275,52 +275,52 @@
                         <div class="offerRoomSection__room__bigContainer__smallContainer__amenitiesContainer">
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/air-conditioner.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/air-conditioner.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Air conditioner</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/wifi.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/wifi.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">High speed WiFi</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/lunch.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/lunch.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Breakfast</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/kitchen.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/kitchen.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Kitchen</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/cleaning.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/cleaning.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Cleaning</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shower.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shower.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shower</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/grocery.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/grocery.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Grocery</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/bed.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/bed.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Single bed</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/shop.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/shop.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Shop near</p>
                             </div>
                             <div class="amenitiesSection__container__subcontainer">
                                 <img class="amenitiesSection__container__subcontainer__img"
-                                    src="src/assets/icons/towel.svg" alt="Amenity icon" />
+                                    src="{{ asset('assets/icons/towel.svg') }}" alt="Amenity icon" />
                                 <p class="amenitiesSection__container__subcontainer__text">Towels</p>
                             </div>
                         </div>
@@ -338,9 +338,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg"
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img1.jpg"
+                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
                                 alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                             <p class="roomSlider__slides--description">
@@ -358,9 +358,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg"
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img2.jpg"
+                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
                                 alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Single Room</h1>
                             <p class="roomSlider__slides--description">
@@ -378,9 +378,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg"
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img3.jpg"
+                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
                                 alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Suite</h1>
                             <p class="roomSlider__slides--description">
@@ -398,9 +398,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg"
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img4.jpg"
+                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img4.jpg') }}"
                                 alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Double Room</h1>
                             <p class="roomSlider__slides--description">
@@ -418,9 +418,9 @@
                     </div>
                     <div class="swiper-slide">
                         <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="src/assets/imgs/room-info.svg"
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="src/assets/imgs/room-img5.jpg"
+                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
                                 alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Cabana Room</h1>
                             <p class="roomSlider__slides--description">
@@ -445,9 +445,9 @@
             <div class="popularRoomsSection__desktopContainer">
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="src/assets/imgs/room-info.svg"
+                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                             alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="src/assets/imgs/room-img5.jpg"
+                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
                             alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Minimal Duplex Room</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
@@ -466,9 +466,9 @@
                 </div>
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="src/assets/imgs/room-info.svg"
+                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                             alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="src/assets/imgs/room-img2.jpg"
+                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
                             alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Suite</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
@@ -487,9 +487,9 @@
                 </div>
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="src/assets/imgs/room-info.svg"
+                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                             alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="src/assets/imgs/room-img3.jpg"
+                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
                             alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Doble Superior</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
@@ -519,7 +519,7 @@
             <div class="footer__container1__subcontainer1">
                 <div class="footer__container1__subcontainer1__header">
                     <h1>H</h1>
-                    <img src="src/assets/icons/logo.svg" alt="Hotel name" />
+                    <img src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel name" />
                 </div>
                 <p class="footer__container1__subcontainer1__description">
                     Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
@@ -528,7 +528,7 @@
                 </p>
                 <div class="footer__container1__subcontainer1__icons">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <img src="src/assets/icons/facebook.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/facebook.svg') }}" alt="Logo" />
                     </a>
                     <svg width="24" height="38" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -537,14 +537,14 @@
                             fill="#777777" />
                     </svg>
                     <a href="https://www.behance.net/" target="_blank">
-                        <img src="src/assets/icons/behance.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/behance.svg') }}" alt="Logo" />
                     </a>
                     <a href="https://www.linkedin.com/in/danipoav" target="_blank">
-                        <img src="src/assets/icons/linkedin.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/linkedin.svg') }}" alt="Logo" />
                     </a>
 
                     <a href="https://www.youtube.com/" target="_blank">
-                        <img src="src/assets/icons/youtube.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/youtube.svg') }}" alt="Logo" />
                     </a>
                 </div>
             </div>
@@ -595,7 +595,7 @@
                 <div class="footer__container1__subcontainer3__contact">
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/phone.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/phone.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Phone Number
@@ -607,7 +607,7 @@
                     </div>
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/mail.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/mail.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Mail
@@ -619,7 +619,7 @@
                     </div>
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/location.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/location.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Our Location

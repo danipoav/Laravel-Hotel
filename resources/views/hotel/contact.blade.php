@@ -20,7 +20,7 @@
             <div class="nav__container">
                 <div class="nav__container nav__container__menu">
                     <div class="nav__container__menu nav__container__menu--burger">
-                        <img id="mobileMenuBurguer" src="src/assets/icons/menu.svg" alt="Menu icon">
+                        <img id="mobileMenuBurguer" src="{{ asset('assets/icons/menu.svg') }}" alt="Menu icon">
                     </div>
                     <div class="nav__container__menu nav__container__menu--logo">
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
@@ -28,7 +28,7 @@
                         </div>
                         <a href="index.html">
                             <img class="nav__container__menu--logo nav__container__menu--logo--title"
-                                src="src/assets/icons/logo.svg" alt="Hotel Title">
+                                src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="src/assets/icons/person.svg"
+                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
                             alt="User icon">
-                        <img class="nav__container__functionalities--search" src="src/assets/icons/search.svg"
+                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
                             alt="Search icon">
                     </div>
                 </div>
@@ -69,7 +69,7 @@
 
         <section class="contactDetailsSection">
             <div class="contactDetailsSection__container">
-                <img class="contactDetailsSection__container__img" src="src/assets/icons/mail.svg" alt="Contact icon" />
+                <img class="contactDetailsSection__container__img" src="{{ asset('assets/icons/mail.svg') }}" alt="Contact icon" />
                 <div class="contactDetailsSection__container__subcontainer">
                     <p class="contactDetailsSection__container__subcontainer__header">
                         Hotel Address
@@ -81,7 +81,7 @@
                 <p class="contactDetailsSection__container__number">01</p>
             </div>
             <div class="contactDetailsSection__container">
-                <img class="contactDetailsSection__container__img" src="src/assets/icons/phone.svg"
+                <img class="contactDetailsSection__container__img" src="{{ asset('assets/icons/phone.svg') }}"
                     alt="Contact icon" />
                 <div class="contactDetailsSection__container__subcontainer">
                     <p class="contactDetailsSection__container__subcontainer__header">
@@ -94,7 +94,7 @@
                 <p class="contactDetailsSection__container__number">02</p>
             </div>
             <div class="contactDetailsSection__container">
-                <img class="contactDetailsSection__container__img" src="src/assets/icons/location.svg"
+                <img class="contactDetailsSection__container__img" src="{{ asset('assets/icons/location.svg') }}"
                     alt="Contact icon" />
                 <div class="contactDetailsSection__container__subcontainer">
                     <p class="contactDetailsSection__container__subcontainer__header">
@@ -115,13 +115,13 @@
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
                         placeholder="Your full name" />
-                    <img class="contactFormSection__firstContainer__input__icon" src="src/assets/icons/form-person.svg"
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-person.svg') }}"
                         alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
                         placeholder="Add phone number" />
-                    <img class="contactFormSection__firstContainer__input__icon" src="src/assets/icons/form-phone.svg"
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-phone.svg') }}"
                         alt="Contact icon" />
                 </div>
             </div>
@@ -129,14 +129,14 @@
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
                         placeholder="Enter email address" />
-                    <img class="contactFormSection__firstContainer__input__icon" src="src/assets/icons/form-mail.svg"
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-mail.svg') }}"
                         alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
                         placeholder="Enter subject" />
                     <img class="contactFormSection__firstContainer__input__icon"
-                        src="src/assets/icons/form-subject.svg" alt="Contact icon" />
+                        src="{{ asset('assets/icons/form-subject.svg') }}" alt="Contact icon" />
                 </div>
             </div>
             <div class="contactFormSection__firstContainer">
@@ -144,7 +144,7 @@
                     <input class="contactFormSection__firstContainer__input__field--big" type="text"
                         placeholder="Tell us what you need" />
                     <img class="contactFormSection__firstContainer__input__icon"
-                        src="src/assets/icons/form-pencil.svg" alt="Contact icon" />
+                        src="{{ asset('assets/icons/form-pencil.svg') }}" alt="Contact icon" />
                 </div>
             </div>
             <button class="btn">SEND</button>
@@ -157,7 +157,7 @@
             <div class="footer__container1__subcontainer1">
                 <div class="footer__container1__subcontainer1__header">
                     <h1>H</h1>
-                    <img src="src/assets/icons/logo.svg" alt="Hotel name" />
+                    <img src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel name" />
                 </div>
                 <p class="footer__container1__subcontainer1__description">
                     Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
@@ -166,7 +166,7 @@
                 </p>
                 <div class="footer__container1__subcontainer1__icons">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <img src="src/assets/icons/facebook.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/facebook.svg') }}" alt="Logo" />
                     </a>
                     <svg width="24" height="38" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -175,14 +175,14 @@
                             fill="#777777" />
                     </svg>
                     <a href="https://www.behance.net/" target="_blank">
-                        <img src="src/assets/icons/behance.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/behance.svg') }}" alt="Logo" />
                     </a>
                     <a href="https://www.linkedin.com/in/danipoav" target="_blank">
-                        <img src="src/assets/icons/linkedin.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/linkedin.svg') }}" alt="Logo" />
                     </a>
 
                     <a href="https://www.youtube.com/" target="_blank">
-                        <img src="src/assets/icons/youtube.svg" alt="Logo" />
+                        <img src="{{ asset('assets/icons/youtube.svg') }}" alt="Logo" />
                     </a>
                 </div>
             </div>
@@ -233,7 +233,7 @@
                 <div class="footer__container1__subcontainer3__contact">
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/phone.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/phone.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Phone Number
@@ -245,7 +245,7 @@
                     </div>
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/mail.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/mail.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Email
@@ -257,7 +257,7 @@
                     </div>
                     <div class="footer__container1__subcontainer3__contact__one">
                         <img class="footer__container1__subcontainer3__contact__one__icon"
-                            src="src/assets/icons/location.svg" alt="Contact icon" />
+                            src="{{ asset('assets/icons/location.svg') }}" alt="Contact icon" />
                         <div class="footer__container1__subcontainer3__contact__one__data">
                             <p class="footer__container1__subcontainer3__contact__one__data__title">
                                 Our Location
