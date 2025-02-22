@@ -109,44 +109,48 @@
 
 
 
-        <form class="contactFormSection" action="{{route('create.contact')}}" method="POST">
+        <form class="contactFormSection" action="{{ route('create.contact') }}" method="POST">
             @csrf
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
-                    <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Your name" name="name"/>
-                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-person.svg') }}"
-                        alt="Contact icon" />
+                    <input class="contactFormSection__firstContainer__input__field" type="text" placeholder="Your name" name="name" required/>
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-person.svg') }}" alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
-                    <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Add phone number" name="phone"/>
-                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-phone.svg') }}"
-                        alt="Contact icon" />
+                    <input class="contactFormSection__firstContainer__input__field" type="text" placeholder="Add phone number" name="phone" required/>
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-phone.svg') }}" alt="Contact icon" />
                 </div>
             </div>
+        
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
-                    <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Add day" name="days"/>
-                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-mail.svg') }}"
-                        alt="Contact icon" />
+                    <select name="days" id="days" required>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                    </select>
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-mail.svg') }}" alt="Contact icon" />
                 </div>
                 <div class="contactFormSection__firstContainer__input">
-                    <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Status" name="status"/>
-                    <img class="contactFormSection__firstContainer__input__icon"
-                        src="{{ asset('assets/icons/form-subject.svg') }}" alt="Contact icon" />
+                    <select name="status" id="status" required>
+                        <option value="booked">Booked</option>
+                        <option value="available">Available</option>
+                    </select>
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-subject.svg') }}" alt="Contact icon" />
                 </div>
             </div>
+        
             <div class="contactFormSection__firstContainer">
                 <div class="contactFormSection__firstContainer__input">
-                    <input class="contactFormSection__firstContainer__input__field--big" type="text"
-                        placeholder="Your job description" name="job_desc"/>
-                    <img class="contactFormSection__firstContainer__input__icon"
-                        src="{{ asset('assets/icons/form-pencil.svg') }}" alt="Contact icon" />
+                    <input class="contactFormSection__firstContainer__input__field--big" type="text" placeholder="Your job description" name="job_desc" required/>
+                    <img class="contactFormSection__firstContainer__input__icon" src="{{ asset('assets/icons/form-pencil.svg') }}" alt="Contact icon" />
                 </div>
             </div>
+        
             <button type="submit" class="btn">SEND</button>
         </form>
     </main>

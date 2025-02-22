@@ -3513,42 +3513,49 @@ body {
   flex-wrap: wrap;
   gap: 1.6rem;
 }
-@media all and (min-width: 1000px) {
-  .contactFormSection div:nth-child(3) {
-    width: 91.5%;
-  }
-}
+
 @media all and (min-width: 1000px) {
   .contactFormSection {
     width: 80%;
   }
+  .contactFormSection div:nth-child(3) {
+    width: 91.5%;
+  }
 }
+
 .contactFormSection__firstContainer {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   width: 100%;
 }
+
 @media all and (min-width: 1000px) {
   .contactFormSection__firstContainer {
     width: 45%;
   }
 }
+
 .contactFormSection__firstContainer__input {
   position: relative;
 }
-.contactFormSection__firstContainer__input__field {
+
+.contactFormSection__firstContainer__input__field,
+.contactFormSection__firstContainer__input__field--big,
+.contactFormSection__firstContainer__input select {
   border: none;
   background-color: #f8f8f8;
   width: 100%;
   padding: 2.5rem 5.2rem;
+  font-size: 1rem;
+  font-size: 1.5rem;
+
 }
+
 .contactFormSection__firstContainer__input__field--big {
-  border: none;
-  background-color: #f8f8f8;
-  width: 100%;
   padding: 2.5rem 5.2rem 13rem 5.2rem;
 }
+
 .contactFormSection__firstContainer__input__icon {
   position: absolute;
   width: 1.5rem;
@@ -3556,12 +3563,31 @@ body {
   left: 2rem;
   top: 2.5rem;
 }
+
+.contactFormSection__firstContainer__input select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 3rem;
+  font-size: 1.5rem;
+}
+
 .contactFormSection button {
   width: 80%;
   margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
 @media all and (min-width: 1000px) {
   .contactFormSection button {
     width: 20%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+input[name="_token"] {
+  position: absolute;
+}
