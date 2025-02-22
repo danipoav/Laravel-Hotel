@@ -65,12 +65,14 @@
                     The Perfect Base For You
                 </h1>
                 <div class="tourSection__container__buttons">
-                    <button class="tourSection__container_buttons tourSection__container__buttons--tour btn">
+                    <a class="tourSection__container_buttons tourSection__container__buttons--tour btn"
+                        href="{{ route('about') }}">
                         TAKE A TOUR
-                    </button>
-                    <button class="tourSection__container_buttons tourSection__container__buttons--learn btn">
+                    </a>
+                    <a class="tourSection__container_buttons tourSection__container__buttons--learn btn"
+                        href="{{ route('offers') }}">
                         LEARN MORE
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -260,7 +262,7 @@
                 </video>
             </div>
 
-            <button class="videoSection__button btn">BOOK NOW</button>
+            <a href="{{route('rooms')}}"><button class="videoSection__button btn">BOOK NOW</button><a href=""></a>
         </section>
 
 
