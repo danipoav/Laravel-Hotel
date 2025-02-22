@@ -110,7 +110,7 @@
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat.
                 </p>
-                <button class="aboutSection__info--button btn">BOOK NOW</button>
+                <a class="aboutSection__info--button btn" href="{{ route('rooms') }}">BOOK NOW</a>
             </div>
             <div class="aboutSection__cards">
                 <div class="aboutSection__cards__team">

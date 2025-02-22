@@ -880,7 +880,6 @@ body {
     padding-left: 7rem;
     padding-right: 5rem;
     margin-top: 15rem;
-    z-index: -5;
   }
 }
 .aboutSection__info--subtitle {
@@ -912,6 +911,7 @@ body {
   font-size: 1.4rem;
   line-height: 2.4rem;
   color: #777777;
+  margin-bottom: 5em;
 }
 .aboutSection__info--button {
   margin: 1.4rem 2.2rem 17.5rem 2rem;
@@ -929,6 +929,7 @@ body {
   letter-spacing: 0.28rem;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: inherit;
 }
 @media all and (min-width: 1000px) {
   .aboutSection__cards {
@@ -943,6 +944,7 @@ body {
   top: -12rem;
   width: 70%;
   margin: auto;
+  display: none;
 }
 @media all and (min-width: 1000px) {
   .aboutSection__cards__team {
@@ -1024,6 +1026,7 @@ body {
   width: 70%;
   margin: auto;
   top: -2rem;
+  margin-top: 10em;
 }
 @media all and (min-width: 1000px) {
   .aboutSection__cards__room {
