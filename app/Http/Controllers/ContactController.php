@@ -52,7 +52,7 @@ class ContactController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('contact');
+        return redirect()->route('contact')->with('success', 'Contact created successfully');
     }
 
     /**
