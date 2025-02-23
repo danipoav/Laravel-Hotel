@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Miranda DP</title>
-    <link rel="icon" type="image/svg+xml" href="src/assets/icons/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-</head>
-
-<body>
+@section('content')
     <header class="header">
         <nav class="nav">
             <div class="nav__container">
@@ -40,10 +26,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person"
-                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
-                        <img class="nav__container__functionalities--search"
-                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
+                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
+                            alt="User icon">
+                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
+                            alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -83,13 +69,11 @@
                     <p class="availabilitySection__container__arrival availabilitySection__container__arrival--text">
                         Arrival Date
                     </p>
-                    <input
-                        class="availabilitySection__container__arrival availabilitySection__container__arrival--input"
+                    <input class="availabilitySection__container__arrival availabilitySection__container__arrival--input"
                         type="date" />
                 </div>
                 <div class="availabilitySection__container availabilitySection__container__departure">
-                    <p
-                        class="availabilitySection__container__departure availabilitySection__container__departure--text">
+                    <p class="availabilitySection__container__departure availabilitySection__container__departure--text">
                         Departure Date
                     </p>
                     <input
@@ -116,8 +100,7 @@
             </div>
             <div class="aboutSection__cards">
                 <div class="aboutSection__cards__team">
-                    <img class="aboutSection__cards__team--img" src="{{ asset('assets/imgs/team.jpg') }}"
-                        alt="team" />
+                    <img class="aboutSection__cards__team--img" src="{{ asset('assets/imgs/team.jpg') }}" alt="team" />
                     <div class="aboutSection__cards__team--container">
                         <div class="aboutSection__cards__team--container--icons">
                             <img class="aboutSection__cards__team--container--icons--small"
@@ -262,7 +245,8 @@
                 </video>
             </div>
 
-            <a href="{{route('rooms')}}"><button class="videoSection__button btn">BOOK NOW</button><a href=""></a>
+            <a href="{{ route('rooms') }}"><button class="videoSection__button btn">BOOK NOW</button><a
+                    href=""></a>
         </section>
 
 
@@ -605,11 +589,9 @@
                     <div class="swiperMenuImages-pagination"></div>
                 </div>
                 <div class="menuSection__imagesDesktop">
-                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}"
-                        alt="Food image" />
+                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food2.jpg') }}" alt="Food image" />
                     <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food.jpg') }}" alt="Food image" />
-                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}"
-                        alt="Food image" />
+                    <img class="swiperMenuImages__img" src="{{ asset('assets/imgs/food3.jpg') }}" alt="Food image" />
                 </div>
             </div>
         </section>
@@ -791,12 +773,4 @@
             </div>
         </div>
     </footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
-
-</body>
-
-</html>
+@endsection
