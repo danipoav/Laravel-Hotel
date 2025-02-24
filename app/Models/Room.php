@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    /** @use HasFactory<\Database\Factories\RoomFactory> */
     use HasFactory;
+    
+    public $timestamps = false;
     protected $fillable = [
         'name',
         'photo',
