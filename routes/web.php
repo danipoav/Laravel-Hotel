@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RoomController;
+use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('hotel.index');
+    $rooms = Room::all();
+    return view('hotel.index', compact('rooms'));
 })->name('index');
 
 Route::get('/offers', function () {

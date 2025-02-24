@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
-{
-    //
-}
+use App\Models\Room;
+
+abstract class Controller {}

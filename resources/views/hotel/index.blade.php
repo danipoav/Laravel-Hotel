@@ -144,84 +144,20 @@
             <h1 class="roomSlider__title">Hand Picked Rooms</h1>
             <div class="swiper roomSlider__slides">
                 <div class="swiper-wrapper">
+                    @foreach ($rooms as $room)
                     <div class="swiper-slide">
                         <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                             alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
+                        <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}"
                             alt="Hotel room" />
                         <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                         <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
+                            {{$room['facilities']}}
                         </p>
-                        <p class="roomSlider__slides--price">$345<span
+                        <p class="roomSlider__slides--price">${{$room['price']}}<span
                                 class="roomSlider__slides--price--perNight">/Night</span></p>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <p class="roomSlider__slides--price">$345<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <p class="roomSlider__slides--price">$345<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img4.jpg') }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <p class="roomSlider__slides--price">$345<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <p class="roomSlider__slides--price">$345<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img6.jpg') }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <p class="roomSlider__slides--price">$345<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
