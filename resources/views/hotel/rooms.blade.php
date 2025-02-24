@@ -70,7 +70,8 @@
                                     ${{ $room['price'] }}<span
                                         class="roomSlider__slides__container--price--perNight">/Night</span>
                                 </p>
-                                <a href="{{ route('details') }}" class="roomSlider__slides__container--bookNow">Book
+                                <a href="{{ route('details', ['id' => $room['id']]) }}"
+                                    class="roomSlider__slides__container--bookNow">Book
                                     now</a>
                             </div>
                         </div>

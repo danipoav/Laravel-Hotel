@@ -35,9 +35,10 @@ class RoomController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(int $id)
     {
-        return view('hotel.room-details');
+        $room = Room::findOrFail($id);
+        return view('hotel.room-details', compact('room'));
     }
 
     /**

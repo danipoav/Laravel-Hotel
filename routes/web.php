@@ -28,4 +28,4 @@ Route::post('save-contact', [ContactController::class, 'store'])->name('create.c
 
 //Room Routes
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
-Route::get('/details', [RoomController::class, 'show'])->name('details');
+Route::get('/details/{id}', [RoomController::class, 'show'])->name('details');
