@@ -5,16 +5,19 @@ use App\Http\Controllers\RoomController;
 use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 
+//Index
 Route::get('/', function () {
     $rooms = Room::all();
     return view('hotel.index', compact('rooms'));
 })->name('index');
 
+//Offers
 Route::get('/offers', function () {
     $rooms = Room::take(4)->get();
     return view('hotel.offers', compact('rooms'));
 })->name('offers');
 
+//About
 Route::get('/about', function () {
     return view('hotel.about');
 })->name('about');
@@ -23,4 +26,6 @@ Route::get('/about', function () {
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('save-contact', [ContactController::class, 'store'])->name('create.contact');
 
+//Room Routes
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
+Route::get('/details', [RoomController::class, 'show'])->name('details');

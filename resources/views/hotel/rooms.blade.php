@@ -70,7 +70,8 @@
                                     ${{ $room['price'] }}<span
                                         class="roomSlider__slides__container--price--perNight">/Night</span>
                                 </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
+                                <a href="{{ route('details') }}" class="roomSlider__slides__container--bookNow">Book
+                                    now</a>
                             </div>
                         </div>
                     @endforeach

@@ -117,7 +117,7 @@
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip.
                 </p>
-                <button class="btn">TAKE A TOUR</button>
+                <a href="{{ route('rooms') }}"><button class="btn">BOOK NOW</button></a>
             </div>
         </section>
 
