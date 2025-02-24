@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Miranda - About us DP</title>
-    <link rel="icon" type="image/svg+xml" href="src/assets/icons/favicon.svg">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-</head>
-
-<body>
+@section('content')
     <header class="header">
         <nav class="nav">
             <div class="nav__container">
@@ -40,10 +26,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person"
-                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
-                        <img class="nav__container__functionalities--search"
-                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
+                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
+                            alt="User icon">
+                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
+                            alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -85,15 +71,15 @@
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon"
-                        src="{{ asset('assets/icons/airport.svg') }}" alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/airport.svg') }}"
+                        alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         AIRPORT PICKUP
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon"
-                        src="{{ asset('assets/icons/guide.svg') }}" alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/guide.svg') }}"
+                        alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         CITY GUIDE
                     </h1>
@@ -106,8 +92,8 @@
                     </h1>
                 </div>
                 <div class="aboutVideoSection__container__service">
-                    <img class="aboutVideoSection__container__service__icon"
-                        src="{{ asset('assets/icons/luxury.svg') }}" alt="Service icon" />
+                    <img class="aboutVideoSection__container__service__icon" src="{{ asset('assets/icons/luxury.svg') }}"
+                        alt="Service icon" />
                     <h1 class="aboutVideoSection__container__service__title">
                         LUXURY ROOM
                     </h1>
@@ -552,13 +538,4 @@
             </div>
         </div>
     </footer>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
-
-</body>
-
-</html>
+@endsection

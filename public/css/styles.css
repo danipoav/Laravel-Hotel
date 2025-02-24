@@ -15,6 +15,14 @@ body {
   min-width: 320px;
 }
 
+.success{
+  background-color:#dbead5;
+  color: #0f6a08;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.5em;
+}
+
 .nav {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   height: 7rem;

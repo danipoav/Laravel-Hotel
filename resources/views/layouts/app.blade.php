@@ -11,13 +11,12 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
     @if (session('success'))
-        <div class=" bg-green-200 text-green-800 p-6 text-center text-4xl">
+        <div class="success">
             {{ session('success') }}
         </div>
     @endif

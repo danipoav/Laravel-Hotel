@@ -26,7 +26,8 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="{{ route('index') }}">                            <img class="nav__container__menu--logo nav__container__menu--logo--title"
+                        <a href="{{ route('index') }}"> <img
+                                class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>
                     </div>
@@ -39,10 +40,10 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
-                            alt="User icon">
-                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
-                            alt="Search icon">
+                        <img class="nav__container__functionalities--person"
+                            src="{{ asset('assets/icons/person.svg') }}" alt="User icon">
+                        <img class="nav__container__functionalities--search"
+                            src="{{ asset('assets/icons/search.svg') }}" alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -73,7 +74,8 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img1.jpg') }}" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img1.jpg') }}"
+                    alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -160,7 +162,8 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img4.jpg') }}" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img4.jpg') }}"
+                    alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -247,7 +250,8 @@
                     <p class="offerRoomSection__room__priceContainer--red">$345</p>
                     <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                 </div>
-                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img6.jpg') }}" alt="Room image" />
+                <img class="offerRoomSection__room__img" src="{{ asset('assets/imgs/room-img6.jpg') }}"
+                    alt="Room image" />
                 <div class="offerRoomSection__room__bigContainer">
                     <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                         <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">$500</p>
@@ -444,10 +448,10 @@
             <div class="popularRoomsSection__desktopContainer">
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
-                            alt="Hotel room" />
+                        <img class="popularRoomsSection__swiper__slide__extras"
+                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
+                        <img class="popularRoomsSection__swiper__slide__roomImg"
+                            src="{{ asset('assets/imgs/room-img5.jpg') }}" alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Minimal Duplex Room</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -465,10 +469,10 @@
                 </div>
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
-                            alt="Hotel room" />
+                        <img class="popularRoomsSection__swiper__slide__extras"
+                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
+                        <img class="popularRoomsSection__swiper__slide__roomImg"
+                            src="{{ asset('assets/imgs/room-img2.jpg') }}" alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Suite</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -486,10 +490,10 @@
                 </div>
                 <div class="popularRoomsSection__swiper__slide">
                     <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
-                            alt="Hotel room" />
+                        <img class="popularRoomsSection__swiper__slide__extras"
+                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
+                        <img class="popularRoomsSection__swiper__slide__roomImg"
+                            src="{{ asset('assets/imgs/room-img3.jpg') }}" alt="Hotel room" />
                         <h1 class="popularRoomsSection__swiper__slide__title">Doble Superior</h1>
                         <p class="popularRoomsSection__swiper__slide__description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
