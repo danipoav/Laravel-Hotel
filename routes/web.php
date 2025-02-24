@@ -11,7 +11,8 @@ Route::get('/', function () {
 })->name('index');
 
 Route::get('/offers', function () {
-    return view('hotel.offers');
+    $rooms = Room::take(4)->get();
+    return view('hotel.offers', compact('rooms'));
 })->name('offers');
 
 Route::get('/about', function () {
