@@ -3576,6 +3576,8 @@ body {
   position: relative;
 }
 
+
+
 .contactFormSection__firstContainer__input__field,
 .contactFormSection__firstContainer__input__field--big,
 .contactFormSection__firstContainer__input select {
@@ -3622,8 +3624,4 @@ body {
   .contactFormSection button {
     width: 20%;
   }
-}
-
-input[name="_token"] {
-  position: absolute;
 }
