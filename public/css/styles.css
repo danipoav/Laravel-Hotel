@@ -23,6 +23,14 @@ body {
   padding: 0.5em;
 }
 
+.Unsuccess{
+  background-color:#ffdfd4;
+  color: #f80000;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.5em;
+}
+
 .nav {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   height: 7rem;
@@ -500,6 +508,13 @@ body {
 .btn--light {
   width: 100%;
   font-weight: 400;
+}
+
+.btn--green{
+  margin-top: 1em;
+  width: 100%;
+  font-weight: 400;
+  background-color: #0f6a08;
 }
 
 .featuresSection {

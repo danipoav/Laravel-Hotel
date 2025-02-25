@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    @if (@session('available') === false)
+        <div class="Unsuccess">
+            The room is already occupied on these dates :/
+        </div>
+    @endif
     <header class="header">
         <nav class="nav">
             <div class="nav__container">
@@ -95,18 +100,26 @@
             <p class="singleRoomAvailabilitySection__subtitle">
                 Check Availability
             </p>
-            <form class="singleRoomAvailabilitySection__form">
+            <form class="singleRoomAvailabilitySection__form"
+                action="{{ route('check', ['room' => $room['room_number']]) }}" method="POST">
+                @csrf
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-in-input">Check In</label>
-                    <input id="check-in-input" type="date" />
+                    <input id="check-in-input" type="date" name="checkIn" />
                 </div>
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-out-input">Check Out</label>
-                    <input id="check-out-input" type="date" />
+                    <input id="check-out-input" type="date" name="checkOut" />
                 </div>
                 <button class="btn btn--light" type="submit">
                     CHECK AVAILABILITY
                 </button>
+                @if (@session('available') === true)
+                    <button class="btn btn--green" type="submit">
+                        BOOK
+                    </button>
+                @endif
+
             </form>
             <p class="singleRoomAvailabilitySection__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

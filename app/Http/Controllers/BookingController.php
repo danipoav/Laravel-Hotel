@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -61,4 +62,24 @@ class BookingController extends Controller
     {
         //
     }
+
+    public function check(Request $request, int $roomNumber)
+    {
+        $checkIn = $request->input('checkIn');
+        $checkOut = $request->input('checkOut');
+    
+        $isBooked = Booking::where('room', $roomNumber)
+            ->where(function ($query) use ($checkIn, $checkOut) {
+                $query->whereBetween('check_in', [$checkIn, $checkOut]) 
+                      ->orWhereBetween('check_out', [$checkIn, $checkOut]) 
+                      ->orWhere(function ($q) use ($checkIn, $checkOut) { 
+                          $q->where('check_in', '<=', $checkIn) 
+                            ->where('check_out', '>=', $checkOut);
+                      });
+            })
+            ->exists(); 
+    
+        return redirect()->back()->with('available', !$isBooked);
+    }
+    
 }

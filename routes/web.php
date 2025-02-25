@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RoomController;
 use App\Models\Room;
@@ -29,3 +30,6 @@ Route::post('save-contact', [ContactController::class, 'store'])->name('create.c
 //Room Routes
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 Route::get('/details/{id}', [RoomController::class, 'show'])->name('details');
+
+//Booking Routes
+Route::post('/check/{room}', [BookingController::class, 'check'])->name('check');
