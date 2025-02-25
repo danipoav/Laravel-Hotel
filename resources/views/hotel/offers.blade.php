@@ -61,8 +61,7 @@
                         <p class="offerRoomSection__room__priceContainer--red">${{ $room['price'] }}</p>
                         <p class="offerRoomSection__room__priceContainer--perNightRed">/Night</p>
                     </div>
-                    <img class="offerRoomSection__room__img" src="{{ asset($room['photo']) }}"
-                        alt="Room image" />
+                    <img class="offerRoomSection__room__img" src="{{ asset($room['photo']) }}" alt="Room image" />
                     <div class="offerRoomSection__room__bigContainer">
                         <div class="offerRoomSection__room__bigContainer__priceContainerDesktop">
                             <p class="offerRoomSection__room__bigContainer__priceContainerDesktop--gold">
@@ -76,7 +75,7 @@
                             DOUBLE BED
                         </p>
                         <h1 class="offerRoomSection__room__bigContainer__title">
-                            {{$room['bed_type']}}
+                            {{ $room['bed_type'] }}
                         </h1>
                         <div class="offerRoomSection__room__bigContainer__separation"></div>
                         <div class="offerRoomSection__room__bigContainer__smallContainer">
@@ -140,7 +139,8 @@
                                     <p class="amenitiesSection__container__subcontainer__text">Towels</p>
                                 </div>
                             </div>
-                            <button class="btn">BOOK NOW</button>
+                            <a href="{{ route('details', ['id' => $room['id']]) }}"><button class="btn">BOOK
+                                    NOW</button></a>
                         </div>
                     </div>
                 </div>
