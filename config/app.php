@@ -126,9 +126,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    'providers' => [
-        BookingServiceProvider::class,
-        AppServiceProvider::class
-    ]
+   
 
 ];
