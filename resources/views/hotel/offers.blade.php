@@ -153,106 +153,31 @@
             <h1 class="popularRoomsSection__title">Popular Rooms</h1>
             <div class="swiper roomSlider__slides">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
+                    @foreach ($randomRooms as $random)
+                        <div class="swiper-slide">
+                            <div style="position: relative">
+                                <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                                    alt="Room extras" />
+                                <img class="roomSlider__slides--roomImg" src="{{ asset($random['photo']) }}"
+                                    alt="Hotel room" />
+                                <h1 class="roomSlider__slides--title">{{ $random['bed_type'] }}</h1>
+                                <p class="roomSlider__slides--description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore.
                                 </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book
-                                    now</a>
+                                <div class="roomSlider__slides__container">
+                                    <p class="roomSlider__slides__container--price">
+                                        ${{ $random['price'] }}<span
+                                            class="roomSlider__slides__container--price--perNight">/Night</span>
+                                    </p>
+                                    <a href="{{ route('details', ['id' => $random['id']]) }}"
+                                        class="roomSlider__slides__container--bookNow">Book
+                                        now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Single Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book
-                                    now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Suite</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book
-                                    now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img4.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Double Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book
-                                    now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Cabana Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book
-                                    now</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -260,69 +185,30 @@
 
             <!-- Related rooms for desktop view -->
             <div class="popularRoomsSection__desktopContainer">
-                <div class="popularRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img5.jpg') }}" alt="Hotel room" />
-                        <h1 class="popularRoomsSection__swiper__slide__title">Minimal Duplex Room</h1>
-                        <p class="popularRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="popularRoomsSection__swiper__slide__container">
-                            <p class="popularRoomsSection__swiper__slide__container__price">
-                                $345<span
-                                    class="popularRoomsSection__swiper__slide__container__price--perNight">/Night</span>
+                @foreach ($randomRooms as $random)
+                    <div class="popularRoomsSection__swiper__slide">
+                        <div style="position: relative">
+                            <img class="popularRoomsSection__swiper__slide__extras"
+                                src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
+                            <img class="popularRoomsSection__swiper__slide__roomImg" src="{{ asset($random['photo']) }}"
+                                alt="Hotel room" />
+                            <h1 class="popularRoomsSection__swiper__slide__title">{{ $random['bed_type'] }}</h1>
+                            <p class="popularRoomsSection__swiper__slide__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore.
                             </p>
-                            <a href="offers.html" class="popularRoomsSection__swiper__slide__container__bookNow">Book
-                                now</a>
+                            <div class="popularRoomsSection__swiper__slide__container">
+                                <p class="popularRoomsSection__swiper__slide__container__price">
+                                    ${{ $random['price'] }}<span
+                                        class="popularRoomsSection__swiper__slide__container__price--perNight">/Night</span>
+                                </p>
+                                <a href="{{ route('details', ['id' => $random['id']]) }}"
+                                    class="popularRoomsSection__swiper__slide__container__bookNow">Book
+                                    now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="popularRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img2.jpg') }}" alt="Hotel room" />
-                        <h1 class="popularRoomsSection__swiper__slide__title">Suite</h1>
-                        <p class="popularRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="popularRoomsSection__swiper__slide__container">
-                            <p class="popularRoomsSection__swiper__slide__container__price">
-                                $345<span
-                                    class="popularRoomsSection__swiper__slide__container__price--perNight">/Night</span>
-                            </p>
-                            <a href="offers.html" class="popularRoomsSection__swiper__slide__container__bookNow">Book
-                                now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="popularRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="popularRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="popularRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img3.jpg') }}" alt="Hotel room" />
-                        <h1 class="popularRoomsSection__swiper__slide__title">Doble Superior</h1>
-                        <p class="popularRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="popularRoomsSection__swiper__slide__container">
-                            <p class="popularRoomsSection__swiper__slide__container__price">
-                                $345<span
-                                    class="popularRoomsSection__swiper__slide__container__price--perNight">/Night</span>
-                            </p>
-                            <a href="offers.html" class="popularRoomsSection__swiper__slide__container__bookNow">Book
-                                now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
         </section>

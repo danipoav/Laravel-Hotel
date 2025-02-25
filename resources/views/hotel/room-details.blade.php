@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<script>
-    function onChangeDate() {
-        var checkIn = document.getElementById('check-in-input').value;
-        var checkOut = document.getElementById('check-out-input');
+    <script>
+        function onChangeDate() {
+            var checkIn = document.getElementById('check-in-input').value;
+            var checkOut = document.getElementById('check-out-input');
 
-        if (checkIn) {
-            var date = new Date(checkIn);
-            date.setDate(date.getDate() + 1);
-            var checkOutDate = date.toISOString().split("T")[0];
+            if (checkIn) {
+                var date = new Date(checkIn);
+                date.setDate(date.getDate() + 1);
+                var checkOutDate = date.toISOString().split("T")[0];
+            }
+            checkOut.min = checkOutDate;
         }
-        checkOut.min = checkOutDate;
-    }
-</script>
+    </script>
     @if (session('available') === false)
         <div class="Unsuccess">
             The room is already occupied on these dates :/
@@ -137,7 +137,7 @@
                     </button>
                 @endif
             </form>
-            
+
             <p class="singleRoomAvailabilitySection__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -308,170 +308,62 @@
             <div class="amenitiesSection__separation"></div>
             <div class="swiper roomSlider__slides">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img1.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
+                    @foreach ($rooms as $room)
+                        <div class="swiper-slide">
+                            <div style="position: relative">
+                                <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                                    alt="Room extras" />
+                                <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}"
+                                    alt="Hotel room" />
+                                <h1 class="roomSlider__slides--title">{{ $room['bed_type'] }}</h1>
+                                <p class="roomSlider__slides--description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore.
                                 </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
+                                <div class="roomSlider__slides__container">
+                                    <p class="roomSlider__slides__container--price">
+                                        ${{ $room['price'] }}<span
+                                            class="roomSlider__slides__container--price--perNight">/Night</span>
+                                    </p>
+                                    <a href="{{ route('details', ['id' => $room['id']]) }}"
+                                        class="roomSlider__slides__container--bookNow">Book
+                                        now</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img2.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img3.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img4.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div style="position: relative">
-                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                                alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset('assets/imgs/room-img5.jpg') }}"
-                                alt="Hotel room" />
-                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                            <p class="roomSlider__slides--description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore.
-                            </p>
-                            <div class="roomSlider__slides__container">
-                                <p class="roomSlider__slides__container--price">
-                                    $345<span class="roomSlider__slides__container--price--perNight">/Night</span>
-                                </p>
-                                <a href="room-details.html" class="roomSlider__slides__container--bookNow">Book now</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
 
             <div class="relatedRoomsSection__desktopContainer">
-                <div class="relatedRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="relatedRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="relatedRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img1.jpg') }}" alt="Hotel room" />
-                        <h1 class="relatedRoomsSection__swiper__slide__title">Minimal Duplex Room</h1>
-                        <p class="relatedRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="relatedRoomsSection__swiper__slide__container">
-                            <p class="relatedRoomsSection__swiper__slide__container__price">$345
-                                <span class="relatedRoomsSection__swiper__slide__container__price--perNight">/Night</span>
+                @foreach ($rooms as $room)
+                    <div class="relatedRoomsSection__swiper__slide">
+                        <div style="position: relative">
+                            <img class="relatedRoomsSection__swiper__slide__extras"
+                                src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
+                            <img class="relatedRoomsSection__swiper__slide__roomImg" src="{{ asset($room['photo']) }}"
+                                alt="Hotel room" />
+                            <h1 class="relatedRoomsSection__swiper__slide__title">{{ $room['bed_type'] }}</h1>
+                            <p class="relatedRoomsSection__swiper__slide__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore.
                             </p>
-                            <p class="relatedRoomsSection__swiper__slide__container__bookNow">
-                                Book now
-                            </p>
+                            <div class="relatedRoomsSection__swiper__slide__container">
+                                <p class="relatedRoomsSection__swiper__slide__container__price">${{ $room['price'] }}
+                                    <span
+                                        class="relatedRoomsSection__swiper__slide__container__price--perNight">/Night</span>
+                                </p>
+                                <a href="{{ route('details', ['id' => $room['id']]) }}">
+                                    <p class="relatedRoomsSection__swiper__slide__container__bookNow">
+                                        Book now
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="relatedRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="relatedRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="relatedRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img2.jpg') }}" alt="Hotel room" />
-                        <h1 class="relatedRoomsSection__swiper__slide__title">Single Room</h1>
-                        <p class="relatedRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="relatedRoomsSection__swiper__slide__container">
-                            <p class="relatedRoomsSection__swiper__slide__container__price">$345
-                                <span class="relatedRoomsSection__swiper__slide__container__price--perNight">/Night</span>
-                            </p>
-                            <p class="relatedRoomsSection__swiper__slide__container__bookNow">
-                                Book now
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relatedRoomsSection__swiper__slide">
-                    <div style="position: relative">
-                        <img class="relatedRoomsSection__swiper__slide__extras"
-                            src="{{ asset('assets/imgs/room-info.svg') }}" alt="Room extras" />
-                        <img class="relatedRoomsSection__swiper__slide__roomImg"
-                            src="{{ asset('assets/imgs/room-img3.jpg') }}" alt="Hotel room" />
-                        <h1 class="relatedRoomsSection__swiper__slide__title">Double Room</h1>
-                        <p class="relatedRoomsSection__swiper__slide__description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore.
-                        </p>
-                        <div class="relatedRoomsSection__swiper__slide__container">
-                            <p class="relatedRoomsSection__swiper__slide__container__price">$345
-                                <span class="relatedRoomsSection__swiper__slide__container__price--perNight">/Night</span>
-                            </p>
-                            <p class="relatedRoomsSection__swiper__slide__container__bookNow">
-                                Book now
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
 

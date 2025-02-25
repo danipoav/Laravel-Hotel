@@ -15,7 +15,8 @@ Route::get('/', function () {
 //Offers
 Route::get('/offers', function () {
     $rooms = Room::take(4)->get();
-    return view('hotel.offers', compact('rooms'));
+    $randomRooms = Room::inRandomOrder()->limit(3)->get();
+    return view('hotel.offers', compact('rooms'), compact('randomRooms'));
 })->name('offers');
 
 //About

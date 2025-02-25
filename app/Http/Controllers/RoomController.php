@@ -38,7 +38,8 @@ class RoomController extends Controller
     public function show(int $id)
     {
         $room = Room::findOrFail($id);
-        return view('hotel.room-details', compact('room'));
+        $rooms = Room::inRandomOrder()->limit(3)->get();
+        return view('hotel.room-details', compact('room'), compact('rooms'));
     }
 
     /**
