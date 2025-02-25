@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Ramsey\Uuid\Guid\Guid;
 
 class Booking extends Model
 {
@@ -21,6 +22,18 @@ class Booking extends Model
         'price',
         'status',
     ];
+
+    protected $keyType = 'string'; 
+    public $incrementing = false; 
+
+    protected static function booted()
+    {
+        static::creating(function ($contact) {
+            if (!$contact->id) {
+                $contact->id = (string) Guid::uuid4(); 
+            }
+        });
+    }
 
     //ONE Booking only can have ONE Room
     public function room()

@@ -33,3 +33,4 @@ Route::get('/details/{id}', [RoomController::class, 'show'])->name('details');
 
 //Booking Routes
 Route::post('/check/{room}', [BookingController::class, 'check'])->name('check');
+Route::post('/createBooking/{room}', [BookingController::class, 'store'])->name('create.booking');

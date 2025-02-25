@@ -1,7 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (@session('available') === false)
+<script>
+    function onChangeDate() {
+        var checkIn = document.getElementById('check-in-input').value;
+        var checkOut = document.getElementById('check-out-input');
+
+        if (checkIn) {
+            var date = new Date(checkIn);
+            date.setDate(date.getDate() + 1);
+            var checkOutDate = date.toISOString().split("T")[0];
+        }
+        checkOut.min = checkOutDate;
+    }
+</script>
+    @if (session('available') === false)
         <div class="Unsuccess">
             The room is already occupied on these dates :/
         </div>
@@ -105,22 +118,26 @@
                 @csrf
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-in-input">Check In</label>
-                    <input id="check-in-input" type="date" name="checkIn" />
+                    <input id="check-in-input" type="date" name="checkIn" value="{{ session('checkIn') }}"
+                        onchange="onChangeDate()" />
                 </div>
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-out-input">Check Out</label>
-                    <input id="check-out-input" type="date" name="checkOut" />
+                    <input id="check-out-input" type="date" name="checkOut" value="{{ session('checkOut') }}" />
                 </div>
                 <button class="btn btn--light" type="submit">
                     CHECK AVAILABILITY
                 </button>
-                @if (@session('available') === true)
-                    <button class="btn btn--green" type="submit">
+                @if (session('available') === true)
+                    <input type="hidden" value="{{ $room['price'] }}" name="price">
+
+                    <button class="btn btn--green" type="submit"
+                        formaction="{{ route('create.booking', ['room' => $room['room_number']]) }}">
                         BOOK
                     </button>
                 @endif
-
             </form>
+            
             <p class="singleRoomAvailabilitySection__text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -162,8 +179,8 @@
                     </p>
                 </div>
                 <div class="amenitiesSection__container__subcontainer">
-                    <img class="amenitiesSection__container__subcontainer__img" src="{{ asset('assets/icons/lunch.svg') }}"
-                        alt="Amenity icon" />
+                    <img class="amenitiesSection__container__subcontainer__img"
+                        src="{{ asset('assets/icons/lunch.svg') }}" alt="Amenity icon" />
                     <p class="amenitiesSection__container__subcontainer__text">
                         Breakfast
                     </p>
