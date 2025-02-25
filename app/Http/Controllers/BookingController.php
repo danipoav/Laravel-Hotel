@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\PaymentProvider;
 use App\Models\Booking;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -27,7 +28,7 @@ class BookingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, $room)
+    public function store(Request $request, $room, PaymentProvider $paymentProvider)
     {
         $request->validate([
             'checkIn' => 'required|date',
@@ -40,8 +41,7 @@ class BookingController extends Controller
         $diff = $in->diffInDays($out);
         $price = $request->price * $diff;
 
-
-        Booking::create([
+        $booking = Booking::create([
             'name' => 'Daniel',
             'photo' => 'https://thispersondoesnotexist.com/',
             'check_in' => $request->checkIn,
@@ -52,6 +52,10 @@ class BookingController extends Controller
             'price' => $price,
             'status' => 'Pending'
         ]);
+
+        $paymentProvider->processPayment($price);
+        app('App\Services\BookingNotifier')->notify($booking);
+
 
         return redirect()->route('rooms')->with('success', 'Room Booked correctly!');
     }

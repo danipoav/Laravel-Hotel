@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Interfaces\PaymentProvider;
+use Illuminate\Support\Facades\Log;
 
 class PaypalPaymentProvider implements PaymentProvider
 {
-    public function processPayment(float $amount) {
-        // \File::put(storage_path('logs/paypal_payments.txt'), "Payment processed: $amount\n", FILE_APPEND);
+    public function processPayment(float $amount)
+    {
+        Log::info("Transaccion de " . $amount . " pagada correctamente");
     }
 }

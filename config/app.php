@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\AppServiceProvider;
 use App\Providers\BookingServiceProvider;
 
 return [
@@ -126,7 +127,8 @@ return [
     ],
 
     'providers' => [
-        BookingServiceProvider::class
+        BookingServiceProvider::class,
+        AppServiceProvider::class
     ]
 
 ];
