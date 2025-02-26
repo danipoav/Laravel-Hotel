@@ -28,8 +28,8 @@ class BookingMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('dapoav2002@gmail.com', 'Daniel Poveda'),
-            subject: 'Miranda Hotel Booking',
+            from: new Address(env('MAIL_FROM_ADDRESS', 'noreply@mailtrap.io'), env('MAIL_FROM_NAME', 'Miranda Hotel')),
+        subject: 'Miranda Hotel Booking',
         );
     }
 

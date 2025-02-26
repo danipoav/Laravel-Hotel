@@ -30,7 +30,7 @@
                         <div class="nav__container__menu--logo nav__container__menu--logo--favicon">
                             <span>H</span>
                         </div>
-                        <a href="index.html">
+                        <a href="{{ route('index') }}">
                             <img class="nav__container__menu--logo nav__container__menu--logo--title"
                                 src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel Title">
                         </a>

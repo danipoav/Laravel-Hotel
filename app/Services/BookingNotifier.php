@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Services;
+
+use App\Mail\BookingMail;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class BookingNotifier
 {
     public function notify($booking)
     {
-        Log::info("Nueva reserva creada: {$booking->id}, Check-in: {$booking->check_in}, Check-out: {$booking->check_out}");
+        Mail::to('test@recipient.com')->send(new BookingMail());
     }
 }
