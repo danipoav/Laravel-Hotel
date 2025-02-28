@@ -46,7 +46,9 @@
             <p class="subheaderSection__subtitle">THE ULTIMATE LUXURY</p>
             <h1 class="subheaderSection__title">Our Offers</h1>
             <div class="subheaderSection__navigation">
-                <p class="subheaderSection__navigation__page">Home</p>
+                <a href="{{ route('index') }}">
+                    <p class="subheaderSection__navigation__page">Home</p>
+                </a>
                 <p class="subheaderSection__navigation__page--active">Offers</p>
             </div>
         </section>
