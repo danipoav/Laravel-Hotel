@@ -38,5 +38,6 @@ Route::post('/check/{room}', [BookingController::class, 'check'])->name('check')
 Route::post('/createBooking/{room}', [BookingController::class, 'store'])->name('create.booking');
 
 //Register/Login routes
-Route::get('/register',[AuthController::class,'showRegisterForm'])->name('register');
-Route::get('/login',[AuthController::class,'showLoginForm'])->name('login');
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('save-user', [AuthController::class, 'store'])->name('create.user');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

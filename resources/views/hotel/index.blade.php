@@ -26,8 +26,8 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
-                            alt="User icon">
+                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('register') }}">Register</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        
+
 
         <section class="aboutSection">
             <div class="aboutSection__info">
@@ -122,18 +122,17 @@
             <div class="swiper roomSlider__slides">
                 <div class="swiper-wrapper">
                     @foreach ($rooms as $room)
-                    <div class="swiper-slide">
-                        <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
-                            alt="Room extras" />
-                        <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}"
-                            alt="Hotel room" />
-                        <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
-                        <p class="roomSlider__slides--description">
-                            {{$room['facilities']}}
-                        </p>
-                        <p class="roomSlider__slides--price">${{$room['price']}}<span
-                                class="roomSlider__slides--price--perNight">/Night</span></p>
-                    </div>
+                        <div class="swiper-slide">
+                            <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
+                                alt="Room extras" />
+                            <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}" alt="Hotel room" />
+                            <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
+                            <p class="roomSlider__slides--description">
+                                {{ $room['facilities'] }}
+                            </p>
+                            <p class="roomSlider__slides--price">${{ $room['price'] }}<span
+                                    class="roomSlider__slides--price--perNight">/Night</span></p>
+                        </div>
                     @endforeach
                 </div>
                 <div class="swiper-button-prev"></div>
@@ -158,8 +157,7 @@
                 </video>
             </div>
 
-            <a href="{{ route('rooms') }}"><button class="videoSection__button btn">BOOK NOW</button><a
-                    href=""></a>
+            <a href="{{ route('rooms') }}"><button class="videoSection__button btn">BOOK NOW</button><a href=""></a>
         </section>
 
 
