@@ -28,8 +28,6 @@
                     <div class="nav__container nav__container__functionalities">
                         <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
                             alt="User icon">
-                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
-                            alt="Search icon">
                     </div>
                 </div>
             </div>
@@ -63,28 +61,7 @@
             </div>
         </section>
 
-        <section class="availabilitySection">
-            <div class="availabilitySection__container">
-                <div class="availabilitySection__container availabilitySection__container__arrival">
-                    <p class="availabilitySection__container__arrival availabilitySection__container__arrival--text">
-                        Arrival Date
-                    </p>
-                    <input class="availabilitySection__container__arrival availabilitySection__container__arrival--input"
-                        type="date" />
-                </div>
-                <div class="availabilitySection__container availabilitySection__container__departure">
-                    <p class="availabilitySection__container__departure availabilitySection__container__departure--text">
-                        Departure Date
-                    </p>
-                    <input
-                        class="availabilitySection__container__departure availabilitySection__container__departure--input"
-                        type="date" />
-                </div>
-                <button class="availabilitySection__container availabilitySection__container__button btn">
-                    CHECK AVAILABILITY
-                </button>
-            </div>
-        </section>
+        
 
         <section class="aboutSection">
             <div class="aboutSection__info">
