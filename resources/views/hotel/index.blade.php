@@ -26,9 +26,34 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        @if (Auth::check())
+                            <span>Welcome, <p>{{ auth()->user()->name }}</p></span>
+                            <a href="{{ route('logout') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
+                                        strokeWidth="2">
+                                        <path strokeDasharray="48" strokeDashoffset="48"
+                                            d="M16 5v-1c0 -0.55 -0.45 -1 -1 -1h-9c-0.55 0 -1 0.45 -1 1v16c0 0.55 0.45 1 1 1h9c0.55 0 1 -0.45 1 -1v-1">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s"
+                                                values="48;0" />
+                                        </path>
+                                        <path strokeDasharray="12" strokeDashoffset="12" d="M10 12h11">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s"
+                                                dur="0.2s" values="12;0" />
+                                        </path>
+                                        <path strokeDasharray="6" strokeDashoffset="6" d="M21 12l-3.5 -3.5M21 12l-3.5 3.5">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.9s"
+                                                dur="0.2s" values="6;0" />
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        @else
+                            <a class="auth" href="{{ route('login') }}">Login</a>
+                            <a class="auth" href="{{ route('register') }}">Register</a>
+                        @endif
                     </div>
+
                 </div>
             </div>
         </nav>
@@ -125,7 +150,8 @@
                         <div class="swiper-slide">
                             <img class="roomSlider__slides--extras" src="{{ asset('assets/imgs/room-info.svg') }}"
                                 alt="Room extras" />
-                            <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}" alt="Hotel room" />
+                            <img class="roomSlider__slides--roomImg" src="{{ asset($room['photo']) }}"
+                                alt="Hotel room" />
                             <h1 class="roomSlider__slides--title">Minimal Duplex Room</h1>
                             <p class="roomSlider__slides--description">
                                 {{ $room['facilities'] }}
@@ -157,7 +183,8 @@
                 </video>
             </div>
 
-            <a href="{{ route('rooms') }}"><button class="videoSection__button btn">BOOK NOW</button><a href=""></a>
+            <a href="{{ route('rooms') }}"><button class="videoSection__button btn">BOOK NOW</button><a
+                    href=""></a>
         </section>
 
 

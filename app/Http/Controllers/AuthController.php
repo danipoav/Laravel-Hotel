@@ -50,4 +50,10 @@ class AuthController extends Controller
 
         return back()->withErrors(['email' => 'Correo o contraseña incorrectos.'])->withInput();
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index')->with('success', 'Logged out successfully');
+    }
 }

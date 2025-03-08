@@ -31,7 +31,7 @@ Route::post('save-contact', [ContactController::class, 'store'])->name('create.c
 
 //Room Routes
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
-Route::get('/details/{id}', [RoomController::class, 'show'])->name('details');
+Route::get('/details/{id}', [RoomController::class, 'show'])->name('details')->middleware('auth');
 
 //Booking Routes
 Route::post('/check/{room}', [BookingController::class, 'check'])->name('check');
@@ -41,4 +41,5 @@ Route::post('/createBooking/{room}', [BookingController::class, 'store'])->name(
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::post('save-user', [AuthController::class, 'store'])->name('create.user');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('login-user',[AuthController::class,'loginStore'])->name('user.login');
+Route::post('login-user', [AuthController::class, 'loginStore'])->name('user.login');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
