@@ -53,7 +53,6 @@
                             <a class="auth" href="{{ route('register') }}">Register</a>
                         @endif
                     </div>
-
                 </div>
             </div>
         </nav>

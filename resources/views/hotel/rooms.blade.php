@@ -26,10 +26,32 @@
                 </div>
                 <div>
                     <div class="nav__container nav__container__functionalities">
-                        <img class="nav__container__functionalities--person" src="{{ asset('assets/icons/person.svg') }}"
-                            alt="User icon">
-                        <img class="nav__container__functionalities--search" src="{{ asset('assets/icons/search.svg') }}"
-                            alt="Search icon">
+                        @if (Auth::check())
+                            <span>Welcome, <p>{{ auth()->user()->name }}</p></span>
+                            <a href="{{ route('logout') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
+                                        strokeWidth="2">
+                                        <path strokeDasharray="48" strokeDashoffset="48"
+                                            d="M16 5v-1c0 -0.55 -0.45 -1 -1 -1h-9c-0.55 0 -1 0.45 -1 1v16c0 0.55 0.45 1 1 1h9c0.55 0 1 -0.45 1 -1v-1">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s"
+                                                values="48;0" />
+                                        </path>
+                                        <path strokeDasharray="12" strokeDashoffset="12" d="M10 12h11">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s"
+                                                dur="0.2s" values="12;0" />
+                                        </path>
+                                        <path strokeDasharray="6" strokeDashoffset="6" d="M21 12l-3.5 -3.5M21 12l-3.5 3.5">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.9s"
+                                                dur="0.2s" values="6;0" />
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        @else
+                            <a class="auth" href="{{ route('login') }}">Login</a>
+                            <a class="auth" href="{{ route('register') }}">Register</a>
+                        @endif
                     </div>
                 </div>
             </div>

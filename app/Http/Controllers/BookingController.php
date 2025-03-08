@@ -6,6 +6,7 @@ use App\Interfaces\PaymentProvider;
 use App\Models\Booking;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -30,34 +31,40 @@ class BookingController extends Controller
      */
     public function store(Request $request, $room, PaymentProvider $paymentProvider)
     {
-        $request->validate([
-            'checkIn' => 'required|date',
-            'checkOut' => 'required|date',
-            'price' => 'required|numeric|min:0'
-        ]);
 
-        $in = Carbon::parse($request->checkIn);
-        $out = Carbon::parse($request->checkOut);
-        $diff = $in->diffInDays($out);
-        $price = $request->price * $diff;
+        if (Auth::check()) {
+            $user = Auth::user();
 
-        $booking = Booking::create([
-            'name' => 'Daniel',
-            'photo' => 'https://thispersondoesnotexist.com/',
-            'check_in' => $request->checkIn,
-            'check_out' => $request->checkOut,
-            'room' => $room,
-            'requests' => 'Doloremque qui voluptas eaque voluptates repellendus aut ut. Eaque dolore reiciendis quam. Consequatur animi culpa quam ut enim. Dolorem omnis occaecati porro aut blanditiis nihil quasi.',
-            'booking_date' => today(),
-            'price' => $price,
-            'status' => 'Pending'
-        ]);
+            $request->validate([
+                'checkIn' => 'required|date',
+                'checkOut' => 'required|date',
+                'price' => 'required|numeric|min:0'
+            ]);
 
-        $paymentProvider->processPayment($price);
-        app('App\Services\BookingNotifier')->notify($booking);
+            $in = Carbon::parse($request->checkIn);
+            $out = Carbon::parse($request->checkOut);
+            $diff = $in->diffInDays($out);
+            $price = $request->price * $diff;
 
 
-        return redirect()->route('rooms')->with('success', 'Room Booked correctly!');
+            $booking = Booking::create([
+                'name' => $user->name,
+                'photo' => 'https://thispersondoesnotexist.com/',
+                'check_in' => $request->checkIn,
+                'check_out' => $request->checkOut,
+                'room' => $room,
+                'requests' => 'Doloremque qui voluptas eaque voluptates repellendus aut ut. Eaque dolore reiciendis quam. Consequatur animi culpa quam ut enim. Dolorem omnis occaecati porro aut blanditiis nihil quasi.',
+                'booking_date' => today(),
+                'price' => $price,
+                'status' => 'Pending'
+            ]);
+
+            $paymentProvider->processPayment($price);
+            app('App\Services\BookingNotifier')->notify($booking);
+            return redirect()->route('rooms')->with('success', 'Room Booked correctly!');
+        }
+
+        return redirect()->route('index');
     }
 
     /**
