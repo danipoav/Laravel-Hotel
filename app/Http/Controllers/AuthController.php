@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -15,9 +16,11 @@ class AuthController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string',
-            'password' => 'required|string',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6|confirmed',
+        ], [
+            'email.unique' => 'Emails already in database',
         ]);
 
         User::create([
@@ -26,11 +29,25 @@ class AuthController extends Controller
             'password' => $request->password
         ]);
 
-        return redirect()->route('index')->with('success','Successfully registered user');
+        return redirect()->route('login')->with('success', 'Successfully registered user');
     }
 
     public function showLoginForm()
     {
         return view('log.login');
+    }
+
+    public function loginStore(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->route('index')->with('success', 'Log in succesfull!');
+        }
+
+        return back()->withErrors(['email' => 'Correo o contraseña incorrectos.'])->withInput();
     }
 }
