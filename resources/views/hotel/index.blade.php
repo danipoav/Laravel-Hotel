@@ -51,6 +51,23 @@
                         @else
                             <a class="auth" href="{{ route('login') }}">Login</a>
                             <a class="auth" href="{{ route('register') }}">Register</a>
+
+                            <div class="auth-mobile">
+                                <a href="{{ route('login') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                                        viewBox="0 0 2048 2048">
+                                        <path fill="currentColor"
+                                            d="M1728 1152q26 0 45 19t19 45t-19 45t-45 19t-45-19t-19-45t19-45t45-19m-603-19q-79-54-170-81t-187-28q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H0q0-117 35-229t101-207t157-169t203-113q-56-36-100-83t-76-103t-47-118t-17-130q0-106 40-199t109-163T568 40T768 0t199 40t163 109t110 163t40 200q0 67-16 129t-48 119t-75 103t-101 83q81 29 156 80zM384 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1280 384q79 0 149 30t122 82t83 123t30 149q0 80-30 149t-82 122t-123 83t-149 30q-65 0-128-23v151h-128v128h-128v128H896v-282l395-396q-11-46-11-90q0-79 30-149t82-122t122-83t150-30m0 640q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 35 9 64t21 61l-414 413v102h128v-128h128v-128h128v-91l93-92q40 23 77 39t86 16" />
+                                    </svg>
+                                </a>
+                                <a href="{{ route('register') }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                                        viewBox="0 0 512 512">
+                                        <path fill="currentColor"
+                                            d="M256 512a256 256 0 1 0 0-512a256 256 0 1 0 0 512m-96-360c0-13.3 10.7-24 24-24h88c44.2 0 80 35.8 80 80c0 28-14.4 52.7-36.3 67l34.1 75.1c5.5 12.1.1 26.3-11.9 31.8s-26.3.1-31.8-11.9l-37.2-82H208v72c0 13.3-10.7 24-24 24s-24-10.7-24-24zm48 88h64c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64z" />
+                                    </svg>
+                                </a>
+                            </div>
                         @endif
                     </div>
                 </div>
@@ -92,10 +109,10 @@
                 <p class="aboutSection__info--subtitle">ABOUT US</p>
                 <h1 class="aboutSection__info--title">Discover Our Underground.</h1>
                 <p class="aboutSection__info--paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                    A hidden gem beneath the surface. Explore our exclusive underground facilities, offering a unique and
+                    intimate atmosphere. Whether it’s our stylish lounge, private dining area, or our relaxing spa, this
+                    underground retreat provides the perfect escape from the ordinary. Unveil a new experience and enjoy a
+                    world of luxury and tranquility beneath the surface.
                 </p>
                 <a class="aboutSection__info--button btn" href="{{ route('rooms') }}">BOOK NOW</a>
             </div>
@@ -113,8 +130,7 @@
                             Strong Team
                         </h2>
                         <p class="aboutSection__cards__team--container--paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor.
+                            Our strong team is the backbone of our success. Committed, dedicated, and skilled,
                         </p>
                     </div>
                 </div>
@@ -130,8 +146,7 @@
                             Luxury Room
                         </h2>
                         <p class="aboutSection__cards__room--container--paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor.
+                            Indulge in the ultimate comfort and elegance of our luxury room.
                         </p>
                     </div>
                 </div>
@@ -170,10 +185,10 @@
             <p class="videoSection__subtitle">INTRO VIDEO</p>
             <h1 class="videoSection__title">Meet With Our Luxury Place.</h1>
             <p class="videoSection__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat you have to understand this.
+                Relax and unwind at our hotel’s sparkling outdoor pool. Surrounded by lush greenery, the pool offers a
+                serene atmosphere, perfect for a refreshing swim or lounging by the water. Whether you want to soak up the
+                sun on our comfortable loungers or enjoy a leisurely dip, our pool provides the ideal setting for relaxation
+                and rejuvenation.
             </p>
 
             <div class="videoSection__videoContainer">
@@ -203,10 +218,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Have High Rating</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -217,10 +229,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Quiet Hours</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -231,10 +240,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Best Locations</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -245,10 +251,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Free Cancellation</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -259,10 +262,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Payment Options</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -273,10 +273,7 @@
                         </div>
 
                         <h1 class="featuresSection__slides--title">Special Offers</h1>
-                        <p class="featuresSection__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                 </div>
                 <div class="swiperFeatures-pagination"></div>
@@ -303,8 +300,8 @@
                                         Egg & Bacon
                                     </h1>
                                     <p class="menuSection__slides__part1__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        Classic eggs and bacon, served with perfectly cooked eggs to your preference and
+                                        crispy, savory bacon. A hearty and satisfying breakfast to start your day right.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part1--arrow"
@@ -313,15 +310,14 @@
                             <div class="menuSection__slides__part2">
                                 <div class="menuSection__slides__part2__container">
                                     <img class="menuSection__slides__part2__container--icon"
-                                        src="{{ asset('assets/imgs/egg&bacon.jpg') }}" alt="Food image" />
+                                        src="{{ asset('assets/imgs/coffee.jpg') }}" alt="Food image" />
                                 </div>
                                 <div class="menuSection__slides__part2__container2">
                                     <h1 class="menuSection__slides__part2__container2--title">
                                         Tea or Coffee
                                     </h1>
                                     <p class="menuSection__slides__part2__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        Enjoy a warm and comforting cup of tea or coffee, brewed to perfection.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part2--arrow"
@@ -330,15 +326,15 @@
                             <div class="menuSection__slides__part3">
                                 <div class="menuSection__slides__part3__container">
                                     <img class="menuSection__slides__part3__container--icon"
-                                        src="{{ asset('assets/imgs/egg&bacon.jpg') }}" alt="Food image" />
+                                        src="{{ asset('assets/imgs/fruits.jpg') }}" alt="Food image" />
                                 </div>
                                 <div class="menuSection__slides__part3__container2">
                                     <h1 class="menuSection__slides__part3__container2--title">
                                         Seasonal fruits
                                     </h1>
                                     <p class="menuSection__slides__part3__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A refreshing assortment of fresh, seasonal fruits, including juicy berries, crisp
+                                        apples, ripe bananas, and tropical delights.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part3--arrow"
@@ -356,8 +352,9 @@
                                         Fresh Salad
                                     </h1>
                                     <p class="menuSection__slides__part1__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A light and refreshing small salad, featuring a mix of crisp greens, cherry
+                                        tomatoes, cucumber, and a light dressing. Perfect as a starter or a healthy side
+                                        dish.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part1--arrow"
@@ -373,8 +370,8 @@
                                         Delicious Steak
                                     </h1>
                                     <p class="menuSection__slides__part2__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A perfectly cooked steak, grilled to your liking and served with a rich, flavorful
+                                        crust. Tender and juicy on the inside.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part2--arrow"
@@ -390,8 +387,8 @@
                                         Seasonal fruits
                                     </h1>
                                     <p class="menuSection__slides__part3__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A refreshing assortment of fresh, seasonal fruits, including juicy berries, crisp
+                                        apples, ripe bananas, and tropical delights.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part3--arrow"
@@ -409,8 +406,8 @@
                                         Egg & Bacon
                                     </h1>
                                     <p class="menuSection__slides__part1__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        Classic eggs and bacon, served with perfectly cooked eggs to your preference and
+                                        crispy, savory bacon. A hearty and satisfying breakfast to start your day right.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part1--arrow"
@@ -426,8 +423,7 @@
                                         Tea or Coffee
                                     </h1>
                                     <p class="menuSection__slides__part2__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        Enjoy a warm and comforting cup of tea or coffee, brewed to perfection.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part2--arrow"
@@ -443,8 +439,8 @@
                                         Seasonal fruits
                                     </h1>
                                     <p class="menuSection__slides__part3__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A refreshing assortment of fresh, seasonal fruits, including juicy berries, crisp
+                                        apples, ripe bananas, and tropical delights.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part3--arrow"
@@ -462,8 +458,9 @@
                                         Fresh Salad
                                     </h1>
                                     <p class="menuSection__slides__part1__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A light and refreshing small salad, featuring a mix of crisp greens, cherry
+                                        tomatoes, cucumber, and a light dressing. Perfect as a starter or a healthy side
+                                        dish.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part1--arrow"
@@ -479,8 +476,8 @@
                                         Delicious Steak
                                     </h1>
                                     <p class="menuSection__slides__part2__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A perfectly cooked steak, grilled to your liking and served with a rich, flavorful
+                                        crust. Tender and juicy on the inside.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part2--arrow"
@@ -496,8 +493,8 @@
                                         Seasonal fruits
                                     </h1>
                                     <p class="menuSection__slides__part3__container2--description">
-                                        Lorem ipsum dolor sit amet, consectetur adip isicing elit,
-                                        sed do eiusmod tempor.
+                                        A refreshing assortment of fresh, seasonal fruits, including juicy berries, crisp
+                                        apples, ripe bananas, and tropical delights.
                                     </p>
                                 </div>
                                 <img class="menuSection__slides__part3--arrow"
@@ -587,9 +584,10 @@
                     <img src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel name" />
                 </div>
                 <p class="footer__container1__subcontainer1__description">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
-                    eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+                    Our hotel offers a welcoming and comfortable atmosphere, perfect for both business and leisure
+                    travelers. Located in a prime area, we provide modern amenities, exceptional service, and a relaxing
+                    environment to make your stay enjoyable. Whether you're here for a short visit or an extended stay, our
+                    cozy rooms and convenient location will meet all your needs.
                 </p>
                 <div class="footer__container1__subcontainer1__icons">
                     <a href="https://www.facebook.com/" target="_blank">

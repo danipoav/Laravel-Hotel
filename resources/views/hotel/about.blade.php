@@ -49,8 +49,25 @@
                                 </svg>
                             </a>
                         @else
-                            <a class="auth" href="{{ route('login') }}">Login</a>
-                            <a class="auth" href="{{ route('register') }}">Register</a>
+                        <a class="auth" href="{{ route('login') }}">Login</a>
+                        <a class="auth" href="{{ route('register') }}">Register</a>
+
+                        <div class="auth-mobile">
+                            <a href="{{ route('login') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                                    viewBox="0 0 2048 2048">
+                                    <path fill="currentColor"
+                                        d="M1728 1152q26 0 45 19t19 45t-19 45t-45 19t-45-19t-19-45t19-45t45-19m-603-19q-79-54-170-81t-187-28q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H0q0-117 35-229t101-207t157-169t203-113q-56-36-100-83t-76-103t-47-118t-17-130q0-106 40-199t109-163T568 40T768 0t199 40t163 109t110 163t40 200q0 67-16 129t-48 119t-75 103t-101 83q81 29 156 80zM384 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1280 384q79 0 149 30t122 82t83 123t30 149q0 80-30 149t-82 122t-123 83t-149 30q-65 0-128-23v151h-128v128h-128v128H896v-282l395-396q-11-46-11-90q0-79 30-149t82-122t122-83t150-30m0 640q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 35 9 64t21 61l-414 413v102h128v-128h128v-128h128v-91l93-92q40 23 77 39t86 16" />
+                                </svg>
+                            </a>
+                            <a href="{{ route('register') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M256 512a256 256 0 1 0 0-512a256 256 0 1 0 0 512m-96-360c0-13.3 10.7-24 24-24h88c44.2 0 80 35.8 80 80c0 28-14.4 52.7-36.3 67l34.1 75.1c5.5 12.1.1 26.3-11.9 31.8s-26.3.1-31.8-11.9l-37.2-82H208v72c0 13.3-10.7 24-24 24s-24-10.7-24-24zm48 88h64c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64z" />
+                                </svg>
+                            </a>
+                        </div>
                         @endif
                     </div>
                 </div>
@@ -67,7 +84,9 @@
             <p class="subheaderSection__subtitle">THE ULTIMATE LUXURY</p>
             <h1 class="subheaderSection__title">About Us</h1>
             <div class="subheaderSection__navigation">
-                <a href="{{route('index')}}"><p class="subheaderSection__navigation__page">Home</p></a>
+                <a href="{{ route('index') }}">
+                    <p class="subheaderSection__navigation__page">Home</p>
+                </a>
                 <p class="subheaderSection__navigation__page--active">About</p>
             </div>
         </section>
@@ -134,10 +153,11 @@
                     Get Restaurant Facilities & Many Other More
                 </h1>
                 <p class="restaurantSection__container__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip.
+                    Our restaurant offers a variety of top-notch facilities designed to enhance your dining experience.
+                    Enjoy a comfortable, stylish atmosphere with both indoor and outdoor seating options, perfect for any
+                    occasion. We provide a diverse menu featuring local and international dishes, along with a selection of
+                    fine wines. Our attentive staff is here to ensure exceptional service, whether you're enjoying a casual
+                    meal or celebrating a special event.
                 </p>
                 <a href="{{ route('rooms') }}"><button class="btn">BOOK NOW</button></a>
             </div>
@@ -163,10 +183,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Have High Rating
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -180,10 +197,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Quiet Hours
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -197,10 +211,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Best Locations
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -214,10 +225,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Free Cancellation
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -231,10 +239,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Payment Options
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                     <div class="swiper-slide dark__swiper-slide">
                         <div class="featuresSection__slides__container">
@@ -248,10 +253,7 @@
                         <h1 class="featuresSection__slides--title dark__slides--title">
                             Special Offers
                         </h1>
-                        <p class="featuresSection__slides--description dark__slides--description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna..
-                        </p>
+
                     </div>
                 </div>
                 <div class="swiperFeatures-pagination"></div>
@@ -269,10 +271,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Have High Rating
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
                 <div class="featuresSection__container__slides dark__container__slides">
                     <div class="featuresSection__container__slides__container">
@@ -286,10 +285,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Quiet Hours
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
                 <div class="featuresSection__container__slides dark__container__slides">
                     <div class="featuresSection__container__slides__container">
@@ -303,10 +299,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Best Locations
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
                 <div class="featuresSection__container__slides dark__container__slides">
                     <div class="featuresSection__container__slides__container">
@@ -320,10 +313,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Free Cancellation
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
                 <div class="featuresSection__container__slides dark__container__slides">
                     <div class="featuresSection__container__slides__container">
@@ -337,10 +327,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Payment Options
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
                 <div class="featuresSection__container__slides dark__container__slides">
                     <div class="featuresSection__container__slides__container">
@@ -354,10 +341,7 @@
                     <h1 class="featuresSection__container__slides--title dark__slides--title">
                         Special Offers
                     </h1>
-                    <p class="featuresSection__container__slides--description dark__slides--description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna..
-                    </p>
+
                 </div>
             </div>
         </section>
@@ -437,9 +421,10 @@
                     <img src="{{ asset('assets/icons/logo.svg') }}" alt="Hotel name" />
                 </div>
                 <p class="footer__container1__subcontainer1__description">
-                    Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
-                    eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+                    Our hotel offers a welcoming and comfortable atmosphere, perfect for both business and leisure
+                    travelers. Located in a prime area, we provide modern amenities, exceptional service, and a relaxing
+                    environment to make your stay enjoyable. Whether you're here for a short visit or an extended stay, our
+                    cozy rooms and convenient location will meet all your needs.
                 </p>
                 <div class="footer__container1__subcontainer1__icons">
                     <a href="https://www.facebook.com/" target="_blank">

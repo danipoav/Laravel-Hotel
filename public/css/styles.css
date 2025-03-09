@@ -7,6 +7,7 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -15,6 +16,25 @@ html {
 
 body {
   min-width: 320px;
+}
+
+.auth {
+  display: none;
+}
+
+.auth-mobile{
+  display: flex;
+  gap: 15px;
+}
+
+@media all and (min-width: 1000px) {
+  .auth {
+    display: block;
+  }
+
+  .auth-mobile{
+    display: none;
+  }
 }
 
 .success {
@@ -344,6 +364,7 @@ svg {
   line-height: 1.7rem;
   letter-spacing: -0.048rem;
   color: #222222;
+  text-decoration: none;
 }
 
 .subheaderSection__navigation__page--active {
@@ -356,6 +377,7 @@ svg {
   letter-spacing: -0.048rem;
   border-left: 2px solid #222222;
   color: #b99044;
+  text-decoration: none;
 }
 
 .footer {
@@ -661,6 +683,7 @@ svg {
 
 @media all and (min-width: 1000px) {
 
+  .featuresSection,
   .featuresSection__slides,
   .featuresSection .swiperFeatures {
     display: none;
@@ -808,7 +831,7 @@ svg {
   display: none;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: #ffffff;
@@ -4089,11 +4112,11 @@ svg {
   }
 }
 
-.contactFormSection__firstContainer__input__field--big{
+.contactFormSection__firstContainer__input__field--big {
   width: 100%;
 }
 
-.contactFormSection__firstContainer__text{
+.contactFormSection__firstContainer__text {
   width: 88.5%;
 }
 
