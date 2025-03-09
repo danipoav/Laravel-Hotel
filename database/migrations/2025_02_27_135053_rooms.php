@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('rooms',function(Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->string('photo');
+            $table->string('bed_type');
+            $table->integer('room_number')->unique();
+            $table->string('facilities');
+            $table->integer('price');
+            $table->string('status');
+        });
     }
 
     /**

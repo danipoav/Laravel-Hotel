@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('contacts',function(Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->string('photo');
+            $table->date('join_date');
+            $table->string('job_desc');
+            $table->integer('phone');
+            $table->string('days');
+            $table->string('status');
+        });
     }
 
     /**

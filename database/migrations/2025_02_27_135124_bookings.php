@@ -11,7 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('bookings',function(Blueprint $table){
+            $table->id();
+            $table->string('name');
+            $table->string('photo');
+            $table->date('check_in');
+            $table->date('check_out');
+            $table->integer('room');
+            $table->foreign('room')->references('room_number')->on('rooms')->onDelete('cascade');
+            $table->string('requests');
+            $table->date('booking_date');
+            $table->integer('price');
+            $table->string('status');
+        });
     }
 
     /**
