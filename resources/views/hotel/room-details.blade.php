@@ -165,7 +165,7 @@
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="price">Price</label>
                     <input type="text" name="price"
-                        value=" {{ session('available') === false ? $room['price'] : session('price') }} " readonly>
+                        value=" {{ session('available') ? session('price') : $room['price'] }} " readonly>
                 </div>
                 <button class="btn btn--light" type="submit">
                     CHECK AVAILABILITY
