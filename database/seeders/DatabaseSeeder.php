@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        // Room::factory(6)->create();
+        Room::factory(6)->create();
         // Booking::factory(6)->create();
     }
 }
