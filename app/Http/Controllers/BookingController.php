@@ -104,6 +104,11 @@ class BookingController extends Controller
         $checkIn = $request->input('checkIn');
         $checkOut = $request->input('checkOut');
 
+        $in = Carbon::parse($checkIn);
+        $out = Carbon::parse($checkOut);
+        $diff = $in->diffInDays($out);
+        $price = $request->input('price') * $diff;
+
         $isBooked = Booking::where('room', $roomNumber)
             ->where(function ($query) use ($checkIn, $checkOut) {
                 $query->whereBetween('check_in', [$checkIn, $checkOut])
@@ -115,6 +120,6 @@ class BookingController extends Controller
             })
             ->exists();
 
-        return redirect()->back()->with('available', !$isBooked)->with('checkIn', $checkIn)->with('checkOut', $checkOut);
+        return redirect()->back()->with('available', !$isBooked)->with('checkIn', $checkIn)->with('checkOut', $checkOut)->with('price',$price);
     }
 }

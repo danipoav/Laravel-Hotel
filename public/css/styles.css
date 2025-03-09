@@ -26,6 +26,7 @@ body {
 }
 
 .Unsuccess {
+  margin-top: 2em;
   background-color: #ffdfd4;
   color: #f80000;
   font-size: 2em;
@@ -4084,8 +4085,16 @@ svg {
   }
 
   .contactFormSection div:nth-child(3) {
-    width: 91.5%;
+    width: 42.5%;
   }
+}
+
+.contactFormSection__firstContainer__input__field--big{
+  width: 100%;
+}
+
+.contactFormSection__firstContainer__text{
+  width: 88.5%;
 }
 
 .contactFormSection__firstContainer {

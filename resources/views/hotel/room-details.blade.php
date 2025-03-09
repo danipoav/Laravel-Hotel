@@ -2,6 +2,19 @@
 
 @section('content')
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (sessionStorage.getItem("scrollPosition")) {
+                window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
+                sessionStorage.removeItem("scrollPosition");
+            }
+
+            document.querySelectorAll("form").forEach(form => {
+                form.addEventListener("submit", function() {
+                    sessionStorage.setItem("scrollPosition", window.scrollY);
+                });
+            });
+        });
+
         function onChangeDate() {
             var checkIn = document.getElementById('check-in-input').value;
             var checkOut = document.getElementById('check-out-input');
@@ -14,11 +27,6 @@
             checkOut.min = checkOutDate;
         }
     </script>
-    @if (session('available') === false)
-        <div class="Unsuccess">
-            The room is already occupied on these dates :/
-        </div>
-    @endif
     <header class="header">
         <nav class="nav">
             <div class="nav__container">
@@ -137,17 +145,27 @@
             <p class="singleRoomAvailabilitySection__subtitle">
                 Check Availability
             </p>
+            @if (session('available') === false)
+                <div class="Unsuccess">
+                    The room is already occupied on these dates
+                </div>
+            @endif
             <form class="singleRoomAvailabilitySection__form"
                 action="{{ route('check', ['room' => $room['room_number']]) }}" method="POST">
                 @csrf
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-in-input">Check In</label>
                     <input id="check-in-input" type="date" name="checkIn" value="{{ session('checkIn') }}"
-                        onchange="onChangeDate()" />
+                        min="{{ date('Y-m-d') }}" onchange="onChangeDate()" />
                 </div>
                 <div class="singleRoomAvailabilitySection__form__block">
                     <label for="check-out-input">Check Out</label>
                     <input id="check-out-input" type="date" name="checkOut" value="{{ session('checkOut') }}" />
+                </div>
+                <div class="singleRoomAvailabilitySection__form__block">
+                    <label for="price">Price</label>
+                    <input type="text" name="price"
+                        value=" {{ session('available') === false ? $room['price'] : session('price') }} " readonly>
                 </div>
                 <button class="btn btn--light" type="submit">
                     CHECK AVAILABILITY
@@ -196,8 +214,8 @@
                     </p>
                 </div>
                 <div class="amenitiesSection__container__subcontainer">
-                    <img class="amenitiesSection__container__subcontainer__img" src="{{ asset('assets/icons/wifi.svg') }}"
-                        alt="Amenity icon" />
+                    <img class="amenitiesSection__container__subcontainer__img"
+                        src="{{ asset('assets/icons/wifi.svg') }}" alt="Amenity icon" />
                     <p class="amenitiesSection__container__subcontainer__text">
                         High speed WiFi
                     </p>

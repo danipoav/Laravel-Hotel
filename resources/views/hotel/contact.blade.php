@@ -68,7 +68,9 @@
             <p class="subheaderSection__subtitle">THE ULTIMATE LUXURY</p>
             <h1 class="subheaderSection__title">New Details</h1>
             <div class="subheaderSection__navigation">
-                <a href="{{ route('index') }}"><p class="subheaderSection__navigation__page">Home</p></a>
+                <a href="{{ route('index') }}">
+                    <p class="subheaderSection__navigation__page">Home</p>
+                </a>
                 <p class="subheaderSection__navigation__page--active">Contact</p>
             </div>
         </section>
@@ -117,8 +119,6 @@
             </div>
         </section>
 
-
-
         <form class="contactFormSection" action="{{ route('create.contact') }}" method="POST">
             @csrf
             <div class="contactFormSection__firstContainer">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field" type="text"
-                        placeholder="Add phone number" name="phone" required />
+                        placeholder="Add phone number" name="phone" required pattern="\d{9}" title="The phone number have to be 9 numbers"/>
                     <img class="contactFormSection__firstContainer__input__icon"
                         src="{{ asset('assets/icons/form-phone.svg') }}" alt="Contact icon" />
                 </div>
@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="contactFormSection__firstContainer">
+            <div class="contactFormSection__firstContainer__text">
                 <div class="contactFormSection__firstContainer__input">
                     <input class="contactFormSection__firstContainer__input__field--big" type="text"
                         placeholder="Your job description" name="job_desc" required />
@@ -305,4 +305,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.contactFormSection').addEventListener('submit', function(event) {
+            const phoneInput = document.querySelector('input[name="phone"]');
+            const phoneValue = phoneInput.value.trim();
+
+            if (!/^\d{9}$/.test(phoneValue)) {
+                alert('El número de teléfono debe tener exactamente 9 dígitos numéricos.');
+                event.preventDefault();
+            }
+        });
+    </script>
 @endsection
