@@ -10,9 +10,9 @@
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     @if (session('success'))
-        <div class="success">
-            {{ session('success') }}
-        </div>
+    <div class=" bg-green-200 text-green-600 absolute top-0 w-full py-3 px-4 text-center">
+        {{ session('success') }}
+    </div>
     @endif
     @yield('content')
 </body>

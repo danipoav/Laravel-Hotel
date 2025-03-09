@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('photo');
-            $table->date('join_date');
+            $table->dateTime('join_date');
             $table->string('job_desc');
             $table->integer('phone');
             $table->string('days');
